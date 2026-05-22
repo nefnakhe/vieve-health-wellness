@@ -124,8 +124,8 @@ const downloads = [
   },
   {
     Icon: PortionHandIcon,
-    iconBg: "bg-green-50",
-    iconColor: "text-green-700",
+    iconBg: "bg-teal-50",
+    iconColor: "text-teal-700",
     title: "Portion Control Hand Guide",
     description:
       "A visual, practical guide to measuring food portions using your own hand — no scales, no apps, no complicated calculations needed.",
@@ -144,7 +144,7 @@ const downloads = [
     topics: ["Vegetables", "Beans & legumes", "Lean proteins", "Low-GI options"],
     file: "/downloads/diabetes-friendly-nigerian-foods.pdf",
     badge: "New",
-    badgeColor: "bg-green-600",
+    badgeColor: "bg-teal-600",
   },
   {
     Icon: GroceryBagIcon,
@@ -196,8 +196,8 @@ const downloads = [
   },
   {
     Icon: BalancedPlateIcon,
-    iconBg: "bg-green-50",
-    iconColor: "text-green-700",
+    iconBg: "bg-teal-50",
+    iconColor: "text-teal-700",
     title: "The Balanced African Plate Guide",
     description:
       "Visual guide to building a balanced plate using culturally familiar African foods — protein, fiber, and carbohydrates in the right proportions.",
@@ -211,8 +211,8 @@ const downloads = [
 const educationalGraphics = [
   {
     Icon: PlateMethodIcon,
-    iconBg: "bg-green-100",
-    iconColor: "text-green-700",
+    iconBg: "bg-teal-100",
+    iconColor: "text-teal-700",
     title: "Balanced Plate Method",
     description: "Visual of the African plate divided into sections for vegetables, protein, and starch.",
   },
@@ -233,7 +233,7 @@ const educationalGraphics = [
   {
     Icon: TrafficLightIcon,
     iconBg: "bg-red-50",
-    iconColor: "text-green-600",
+    iconColor: "text-teal-600",
     title: "African Foods Glycemic Index Chart",
     description: "Traffic light–style chart of common African foods and their GI ratings.",
   },
@@ -257,7 +257,7 @@ export default function ResourcesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-green-900 to-green-800 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-900 to-teal-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
             Free Downloads
@@ -265,7 +265,7 @@ export default function ResourcesPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-4">
             Free Educational Resources
           </h1>
-          <p className="text-green-300 text-lg max-w-2xl mx-auto">
+          <p className="text-teal-300 text-lg max-w-2xl mx-auto">
             Practical, culturally relevant guides, tools, and educational materials
             designed specifically for African and diaspora communities. 100% free.
           </p>
@@ -327,7 +327,7 @@ export default function ResourcesPage() {
                   {resource.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium"
+                      className="text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full font-medium"
                     >
                       {topic}
                     </span>
@@ -336,7 +336,7 @@ export default function ResourcesPage() {
                 <a
                   href={resource.file}
                   download
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full text-sm transition-colors w-full"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full text-sm transition-colors w-full"
                 >
                   <Download size={15} />
                   Download Free
@@ -367,7 +367,7 @@ export default function ResourcesPage() {
             {educationalGraphics.map((graphic) => (
               <div
                 key={graphic.title}
-                className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-2xl p-6"
+                className="bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 rounded-2xl p-6"
               >
                 <div className={`w-14 h-14 ${graphic.iconBg} rounded-2xl flex items-center justify-center mb-4`}>
                   <graphic.Icon className={`w-8 h-8 ${graphic.iconColor}`} />
@@ -376,7 +376,7 @@ export default function ResourcesPage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {graphic.description}
                 </p>
-                <span className="inline-block text-xs text-green-700 font-medium bg-white border border-green-200 px-3 py-1 rounded-full">
+                <span className="inline-block text-xs text-teal-700 font-medium bg-white border border-teal-200 px-3 py-1 rounded-full">
                   Available in Free Resource Pack
                 </span>
               </div>
@@ -389,7 +389,7 @@ export default function ResourcesPage() {
             </p>
             <Link
               href="#newsletter"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full transition-colors"
             >
               <Mail size={18} />
               Join the Community
@@ -399,12 +399,12 @@ export default function ResourcesPage() {
       </section>
 
       {/* Blog CTA */}
-      <section className="py-16 bg-green-900 text-white text-center">
+      <section className="py-16 bg-teal-900 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-3">
             Want Even More Education?
           </h2>
-          <p className="text-green-300 mb-6">
+          <p className="text-teal-300 mb-6">
             Explore our blog for in-depth articles on African foods, blood sugar, meal
             planning, and diabetes management.
           </p>

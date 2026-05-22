@@ -27,7 +27,7 @@ export default function NewsletterForm({ variant = "default" }: Props) {
         <div className="w-8 h-8 rounded-full bg-amber-400/20 flex items-center justify-center">
           <CheckCircle className="text-amber-400" size={18} />
         </div>
-        <p className={`font-semibold text-sm ${variant === "footer" ? "text-white" : "text-green-800"}`}>
+        <p className={`font-semibold text-sm ${variant === "footer" ? "text-white" : "text-teal-800"}`}>
           You&apos;re in! Check your inbox for a welcome gift.
         </p>
       </div>
@@ -108,8 +108,8 @@ export default function NewsletterForm({ variant = "default" }: Props) {
             "w-full pl-10 pr-4 py-3.5 rounded-full text-sm",
             "bg-white border-2 border-gray-200",
             "text-gray-900 placeholder-gray-400",
-            "hover:border-green-300 hover:shadow-md hover:shadow-green-100",
-            "focus:border-green-600 focus:outline-none focus:shadow-lg focus:shadow-green-100",
+            "hover:border-teal-300 hover:shadow-md hover:shadow-teal-100",
+            "focus:border-teal-600 focus:outline-none focus:shadow-lg focus:shadow-teal-100",
             "transition-all duration-200",
             "shadow-sm",
           ].join(" ")}
@@ -121,9 +121,9 @@ export default function NewsletterForm({ variant = "default" }: Props) {
         className={[
           "flex items-center justify-center gap-2",
           "px-6 py-3.5 rounded-full text-sm font-bold whitespace-nowrap",
-          "bg-gradient-to-br from-green-600 to-green-800",
-          "text-white shadow-lg shadow-green-900/30",
-          "hover:from-green-500 hover:to-green-700 hover:shadow-xl hover:shadow-green-900/40 hover:-translate-y-0.5",
+          "bg-gradient-to-br from-teal-600 to-teal-800",
+          "text-white shadow-lg shadow-teal-900/30",
+          "hover:from-teal-500 hover:to-teal-700 hover:shadow-xl hover:shadow-teal-900/40 hover:-translate-y-0.5",
           "active:translate-y-0 active:shadow-md",
           "disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none",
           "transition-all duration-200",

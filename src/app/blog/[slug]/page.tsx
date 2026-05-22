@@ -94,11 +94,11 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-green-900 to-green-800 py-16">
+      <section className="bg-gradient-to-br from-teal-900 to-teal-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-green-400 hover:text-green-200 text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-200 text-sm mb-8 transition-colors"
           >
             <ArrowLeft size={16} /> Back to Blog
           </Link>
@@ -108,23 +108,23 @@ export default async function BlogPostPage({ params }: Props) {
               <Tag size={12} />
               {post.category}
             </span>
-            <span className="inline-flex items-center gap-1.5 text-sm text-green-300">
+            <span className="inline-flex items-center gap-1.5 text-sm text-teal-300">
               <Clock size={12} />
               {post.readTime}
             </span>
-            <span className="text-sm text-green-400">{post.date}</span>
+            <span className="text-sm text-teal-400">{post.date}</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
             {post.title}
           </h1>
-          <p className="text-green-300 text-lg leading-relaxed">{post.excerpt}</p>
+          <p className="text-teal-300 text-lg leading-relaxed">{post.excerpt}</p>
         </div>
       </section>
 
       {/* Feature Image */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-1">
-        <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-green-700 to-green-900 shadow-2xl -mb-8 relative z-10">
+        <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl -mb-8 relative z-10">
           <FadeImage
             src={post.image}
             alt={post.title}
@@ -171,8 +171,8 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Sidebar */}
             <aside className="lg:col-span-4 space-y-6">
               {/* Author Card */}
-              <div className="bg-green-50 border border-green-100 rounded-2xl p-6 sticky top-28">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden bg-green-700 mx-auto mb-4">
+              <div className="bg-teal-50 border border-teal-100 rounded-2xl p-6 sticky top-28">
+                <div className="relative w-20 h-20 rounded-full overflow-hidden bg-teal-700 mx-auto mb-4">
                   <FadeImage
                     src="/images/team/dr-genevieve-headshot.jpg"
                     alt="Dr. Genevieve Ufongene"
@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }: Props) {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="font-bold text-green-900">Dr. Genevieve Ufongene</p>
+                  <p className="font-bold text-teal-900">Dr. Genevieve Ufongene</p>
                   <p className="text-gray-500 text-sm mt-0.5">DNP, FNP-C</p>
                   <p className="text-gray-600 text-sm mt-3 leading-relaxed">
                     Diabetes educator passionate about culturally relevant health
@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: Props) {
                   </p>
                   <Link
                     href="/about"
-                    className="mt-4 inline-block text-green-700 font-semibold text-sm hover:text-green-900 transition-colors"
+                    className="mt-4 inline-block text-teal-700 font-semibold text-sm hover:text-teal-900 transition-colors"
                   >
                     About Dr. Genevieve →
                   </Link>
@@ -197,9 +197,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
 
               {/* CTA Card */}
-              <div className="bg-green-800 text-white rounded-2xl p-6">
+              <div className="bg-teal-800 text-white rounded-2xl p-6">
                 <h4 className="font-bold text-lg mb-2">Ready to Go Deeper?</h4>
-                <p className="text-green-300 text-sm mb-4">
+                <p className="text-teal-300 text-sm mb-4">
                   Book a 1:1 session with Dr. Genevieve for personalized diabetes
                   education tailored to your life.
                 </p>
@@ -212,7 +212,7 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
 
               {/* Free resource */}
-              <div className="border-2 border-dashed border-green-300 rounded-2xl p-6 text-center">
+              <div className="border-2 border-dashed border-teal-300 rounded-2xl p-6 text-center">
                 <div className="text-3xl mb-3">📥</div>
                 <h4 className="font-bold text-gray-900 mb-2">Free Resources</h4>
                 <p className="text-gray-500 text-sm mb-4">
@@ -220,7 +220,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </p>
                 <Link
                   href="/resources"
-                  className="inline-block px-4 py-2.5 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full text-sm transition-colors"
+                  className="inline-block px-4 py-2.5 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full text-sm transition-colors"
                 >
                   Get Free Guides
                 </Link>

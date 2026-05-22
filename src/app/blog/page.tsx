@@ -22,7 +22,7 @@ export default function BlogPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-green-900 to-green-800 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-900 to-teal-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
             Educational Articles
@@ -30,7 +30,7 @@ export default function BlogPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-4">
             The Vieve Wellness Blog
           </h1>
-          <p className="text-green-300 text-lg max-w-2xl mx-auto">
+          <p className="text-teal-300 text-lg max-w-2xl mx-auto">
             Practical, culturally relevant education on diabetes, nutrition,
             African foods, and healthy living for the African and diaspora community.
           </p>
@@ -49,8 +49,8 @@ export default function BlogPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     activeCategory === cat
-                      ? "bg-green-700 text-white shadow-sm"
-                      : "bg-gray-100 text-gray-600 hover:bg-green-50 hover:text-green-700"
+                      ? "bg-teal-700 text-white shadow-sm"
+                      : "bg-gray-100 text-gray-600 hover:bg-teal-50 hover:text-teal-700"
                   }`}
                 >
                   {cat}
@@ -69,7 +69,7 @@ export default function BlogPage() {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent"
               />
             </div>
           </div>
@@ -102,12 +102,12 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-green-800 text-white text-center">
+      <section className="py-16 bg-teal-800 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-3">
             Want Personalized Guidance?
           </h2>
-          <p className="text-green-300 mb-6">
+          <p className="text-teal-300 mb-6">
             Articles are just the beginning. Book a 1:1 session for education
             tailored specifically to your health situation and cultural background.
           </p>

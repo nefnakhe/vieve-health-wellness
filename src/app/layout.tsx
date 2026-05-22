@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Vieve Health & Wellness",
-    title: "Vieve Health & Wellness — Where Diabetes Education Meets Empowerment",
+    title: "Vieve Health & Wellness — Culturally Relevant Diabetes Education",
     description:
       "Culturally relevant diabetes education for Africans and the diaspora. Practical, empowering health guidance that reflects our foods, our culture, and our lives.",
     url: "https://www.vievehealthwellness.com",

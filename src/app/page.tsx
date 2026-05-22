@@ -4,7 +4,6 @@ import {
   BookOpen,
   Heart,
   Users,
-  Leaf,
   Star,
   ChevronRight,
   Download,
@@ -112,8 +111,8 @@ const freeResources = [
     title: "Portion Control Hand Guide",
     description: "Visual portion measurement method using just your hand — no scales needed.",
     Icon: PortionHandIcon,
-    iconBg: "bg-green-500/20",
-    iconColor: "text-green-300",
+    iconBg: "bg-teal-500/20",
+    iconColor: "text-teal-300",
     file: "/downloads/portion-control-hand-guide.pdf",
   },
   {
@@ -141,7 +140,7 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO SECTION ──────────────────────────────── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-green-950 via-green-900 to-green-800">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800">
         {/* Background image */}
         <div className="absolute inset-0">
           <FadeImage
@@ -161,12 +160,6 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-3xl">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
-              <Leaf size={14} />
-              Where Diabetes Education Meets Empowerment
-            </div>
-
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Culturally Relevant{" "}
@@ -175,7 +168,7 @@ export default function Home() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-green-200 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-lg sm:text-xl text-teal-200 leading-relaxed mb-10 max-w-2xl">
               Helping individuals and families better understand diabetes, food,
               weight management, and healthy living through practical, culturally
               informed education.
@@ -212,8 +205,8 @@ export default function Home() {
                 href="/resources"
                 className={[
                   "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
-                  "border border-green-400/50 text-green-200",
-                  "hover:bg-white/10 hover:border-green-300 hover:text-white hover:-translate-y-0.5",
+                  "border border-teal-400/50 text-teal-200",
+                  "hover:bg-white/10 hover:border-teal-300 hover:text-white hover:-translate-y-0.5",
                   "active:translate-y-0 transition-all duration-200",
                 ].join(" ")}
               >
@@ -230,7 +223,7 @@ export default function Home() {
                 { icon: Users, text: "Community-centered" },
               ].map((item) => (
                 <div key={item.text}
-                  className="flex items-center gap-2 text-green-200 text-sm
+                  className="flex items-center gap-2 text-teal-200 text-sm
                     bg-white/8 border border-white/15 px-3 py-1.5 rounded-full
                     backdrop-blur-sm">
                   <item.icon size={14} className="text-amber-400" />
@@ -277,21 +270,21 @@ export default function Home() {
                   "Our real-life experiences — no judgment, just empowerment",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-green-600 rounded-full" />
+                    <div className="w-5 h-5 bg-teal-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-teal-600 rounded-full" />
                     </div>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-green-800 font-semibold text-lg">
+              <p className="text-teal-800 font-semibold text-lg">
                 Our mission: make diabetes education practical, empowering, and culturally relevant.
               </p>
             </div>
 
             {/* Image / Visual */}
             <div className="relative">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-green-700 to-green-900 shadow-2xl">
+              <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl">
                 <FadeImage
                   src="/images/community/african-family-meal.jpg"
                   alt="African family enjoying a healthy meal together"
@@ -300,7 +293,7 @@ export default function Home() {
                 />
                 {/* Overlay card */}
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.18)]">
-                  <p className="text-green-900 font-bold text-lg mb-1">
+                  <p className="text-teal-900 font-bold text-lg mb-1">
                     "Finally, education that feels like it was made for us."
                   </p>
                   <p className="text-gray-500 text-sm">— Community Member</p>
@@ -344,17 +337,17 @@ export default function Home() {
                 className={[
                   "bg-white rounded-2xl p-6 border border-gray-100 group",
                   "shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.05)]",
-                  "hover:shadow-[0_6px_24px_rgba(0,0,0,0.1),0_2px_8px_rgba(22,101,52,0.08)]",
+                  "hover:shadow-[0_6px_24px_rgba(0,0,0,0.1),0_2px_8px_rgba(15,118,110,0.08)]",
                   "hover:-translate-y-1.5 transition-all duration-300",
                 ].join(" ")}
               >
                 <div className={[
                   "w-12 h-12 rounded-xl flex items-center justify-center mb-4",
-                  "bg-green-50 group-hover:bg-green-100",
-                  "shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_2px_6px_rgba(22,101,52,0.12)]",
+                  "bg-teal-50 group-hover:bg-teal-100",
+                  "shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_2px_6px_rgba(15,118,110,0.12)]",
                   "transition-all duration-300",
                 ].join(" ")}>
-                  <item.icon size={22} className="text-green-700 icon-glow-green" />
+                  <item.icon size={22} className="text-teal-700 icon-glow-green" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-base">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
@@ -367,9 +360,9 @@ export default function Home() {
               href="/work-with-me"
               className={[
                 "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
-                "bg-gradient-to-br from-green-600 to-green-800",
-                "shadow-[0_4px_14px_rgba(22,101,52,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                "hover:from-green-500 hover:to-green-700 hover:shadow-[0_8px_22px_rgba(22,101,52,0.45)] hover:-translate-y-0.5",
+                "bg-gradient-to-br from-teal-600 to-teal-800",
+                "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                "hover:from-teal-500 hover:to-teal-700 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
@@ -387,7 +380,7 @@ export default function Home() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-green-700 to-green-900 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-headshot.jpg"
                       alt="Dr. Genevieve Ufongene, DNP, FNP-C"
@@ -405,7 +398,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-green-600 to-green-800 shadow-lg">
+                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-workshop.jpg"
                       alt="Dr. Genevieve presenting at an education workshop"
@@ -413,7 +406,7 @@ export default function Home() {
                       className="object-cover opacity-0 transition-opacity duration-700"
                     />
                   </div>
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-green-800 to-green-950 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-800 to-teal-950 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-ada-conference.jpg"
                       alt="Dr. Genevieve at the ADA Scientific Sessions"
@@ -425,9 +418,9 @@ export default function Home() {
               </div>
 
               {/* Credential badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-green-800 text-white px-6 py-3 rounded-full shadow-xl whitespace-nowrap">
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-teal-800 text-white px-6 py-3 rounded-full shadow-xl whitespace-nowrap">
                 <span className="font-bold text-sm">DNP, FNP-C</span>
-                <span className="text-green-300 text-sm ml-2">Board Certified</span>
+                <span className="text-teal-300 text-sm ml-2">Board Certified</span>
               </div>
             </div>
 
@@ -463,9 +456,9 @@ export default function Home() {
                   { label: "Credential", value: "DNP, FNP-C" },
                   { label: "Conferences", value: "ADA Scientific Sessions" },
                 ].map((item) => (
-                  <div key={item.label} className="bg-green-50 border border-green-100 rounded-xl p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_6px_rgba(22,101,52,0.08)]">
+                  <div key={item.label} className="bg-teal-50 border border-teal-100 rounded-xl p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_6px_rgba(15,118,110,0.08)]">
                     <div className="text-xs text-gray-500 mb-1">{item.label}</div>
-                    <div className="font-semibold text-green-900 text-sm">{item.value}</div>
+                    <div className="font-semibold text-teal-900 text-sm">{item.value}</div>
                   </div>
                 ))}
               </div>
@@ -474,9 +467,9 @@ export default function Home() {
                 href="/about"
                 className={[
                   "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
-                  "bg-gradient-to-br from-green-600 to-green-800",
-                  "shadow-[0_4px_14px_rgba(22,101,52,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                  "hover:from-green-500 hover:to-green-700 hover:shadow-[0_8px_22px_rgba(22,101,52,0.45)] hover:-translate-y-0.5",
+                  "bg-gradient-to-br from-teal-600 to-teal-800",
+                  "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                  "hover:from-teal-500 hover:to-teal-700 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                   "active:translate-y-0 transition-all duration-200",
                 ].join(" ")}
               >
@@ -488,7 +481,7 @@ export default function Home() {
       </section>
 
       {/* ── FREE RESOURCES ────────────────────────────── */}
-      <section className="py-20 bg-green-900 text-white">
+      <section className="py-20 bg-teal-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
@@ -497,7 +490,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
               Free Educational Resources
             </h2>
-            <p className="text-green-300 text-lg">
+            <p className="text-teal-300 text-lg">
               Practical guides created specifically for African and diaspora
               communities — completely free.
             </p>
@@ -509,9 +502,9 @@ export default function Home() {
                 key={resource.title}
                 className={[
                   "rounded-2xl p-6 group transition-all duration-300",
-                  "bg-green-800/50 backdrop-blur-sm border border-green-700/60",
+                  "bg-teal-800/50 backdrop-blur-sm border border-teal-700/60",
                   "shadow-[0_2px_12px_rgba(0,0,0,0.2)]",
-                  "hover:bg-green-800/80 hover:border-green-600 hover:-translate-y-1",
+                  "hover:bg-teal-800/80 hover:border-teal-600 hover:-translate-y-1",
                   "hover:shadow-[0_8px_28px_rgba(0,0,0,0.3)]",
                 ].join(" ")}
               >
@@ -524,7 +517,7 @@ export default function Home() {
                 <h3 className="font-bold text-white mb-2 text-base leading-snug">
                   {resource.title}
                 </h3>
-                <p className="text-green-300 text-sm leading-relaxed mb-5">
+                <p className="text-teal-300 text-sm leading-relaxed mb-5">
                   {resource.description}
                 </p>
                 <Link
@@ -545,14 +538,14 @@ export default function Home() {
           {/* Email signup */}
           <div className={[
             "rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto",
-            "bg-green-800/40 border border-green-600/40",
-            "shadow-[0_0_60px_rgba(22,101,52,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]",
+            "bg-teal-800/40 border border-teal-600/40",
+            "shadow-[0_0_60px_rgba(15,118,110,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]",
             "backdrop-blur-sm",
           ].join(" ")}>
             <h3 className="text-2xl font-bold text-white mb-3">
               Join the Vieve Wellness Community
             </h3>
-            <p className="text-green-300 mb-7">
+            <p className="text-teal-300 mb-7">
               Get culturally relevant diabetes education, wellness tips, recipes, and free
               resources delivered to your inbox.
             </p>
@@ -575,7 +568,7 @@ export default function Home() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-900 transition-colors"
+              className="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-900 transition-colors"
             >
               View all articles <ChevronRight size={16} />
             </Link>
@@ -639,7 +632,7 @@ export default function Home() {
       {/* ── FINAL CTA ─────────────────────────────────── */}
       <section
         className="py-20 text-white text-center relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #166534 0%, #14532d 50%, #052e16 100%)" }}
+        style={{ background: "linear-gradient(135deg, #0f766e 0%, #115e59 50%, #042f2e 100%)" }}
       >
         {/* Radial glow */}
         <div className="absolute inset-0 pointer-events-none"
@@ -649,7 +642,7 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-5">
             Ready to Take Control of Your Health?
           </h2>
-          <p className="text-green-300 text-lg mb-10 leading-relaxed">
+          <p className="text-teal-300 text-lg mb-10 leading-relaxed">
             Whether you&apos;re newly diagnosed, managing long-term diabetes, or simply
             looking to live healthier — you deserve education that speaks your language
             and honors your culture.

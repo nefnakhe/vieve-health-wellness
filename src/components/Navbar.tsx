@@ -61,8 +61,8 @@ export default function Navbar() {
                 className={[
                   "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
                   pathname === link.href
-                    ? "text-green-800 bg-green-50 shadow-inner"
-                    : "text-gray-600 hover:text-green-800 hover:bg-green-50",
+                    ? "text-teal-800 bg-teal-50 shadow-inner"
+                    : "text-gray-600 hover:text-teal-800 hover:bg-teal-50",
                 ].join(" ")}
               >
                 {link.label}
@@ -73,10 +73,10 @@ export default function Navbar() {
               href="/work-with-me"
               className={[
                 "ml-3 px-5 py-2.5 rounded-full text-sm font-bold",
-                "bg-gradient-to-br from-green-600 to-green-800 text-white",
-                "shadow-[0_4px_14px_rgba(22,101,52,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                "hover:from-green-500 hover:to-green-700",
-                "hover:shadow-[0_8px_22px_rgba(22,101,52,0.45)] hover:-translate-y-0.5",
+                "bg-gradient-to-br from-teal-600 to-teal-800 text-white",
+                "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                "hover:from-teal-500 hover:to-teal-700",
+                "hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
@@ -90,9 +90,9 @@ export default function Navbar() {
               href="/work-with-me"
               className={[
                 "px-4 py-2 rounded-full text-xs font-bold",
-                "bg-gradient-to-br from-green-600 to-green-800 text-white",
-                "shadow-[0_3px_10px_rgba(22,101,52,0.35)]",
-                "hover:shadow-[0_5px_16px_rgba(22,101,52,0.45)]",
+                "bg-gradient-to-br from-teal-600 to-teal-800 text-white",
+                "shadow-[0_3px_10px_rgba(15,118,110,0.35)]",
+                "hover:shadow-[0_5px_16px_rgba(15,118,110,0.45)]",
                 "transition-all duration-200",
               ].join(" ")}
             >
@@ -104,8 +104,8 @@ export default function Navbar() {
               className={[
                 "p-2 rounded-xl transition-all duration-200",
                 menuOpen
-                  ? "bg-green-50 text-green-800"
-                  : "text-gray-600 hover:bg-green-50 hover:text-green-800",
+                  ? "bg-teal-50 text-teal-800"
+                  : "text-gray-600 hover:bg-teal-50 hover:text-teal-800",
               ].join(" ")}
             >
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -135,8 +135,8 @@ export default function Navbar() {
               className={[
                 "flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all",
                 pathname === link.href
-                  ? "text-green-800 bg-green-50 font-semibold shadow-inner"
-                  : "text-gray-700 hover:text-green-800 hover:bg-green-50",
+                  ? "text-teal-800 bg-teal-50 font-semibold shadow-inner"
+                  : "text-gray-700 hover:text-teal-800 hover:bg-teal-50",
               ].join(" ")}
             >
               {link.label}
@@ -146,8 +146,8 @@ export default function Navbar() {
             href="/work-with-me"
             className={[
               "flex items-center justify-center mt-3 px-4 py-3.5 rounded-xl text-sm font-bold",
-              "bg-gradient-to-br from-green-600 to-green-800 text-white",
-              "shadow-[0_4px_14px_rgba(22,101,52,0.35)]",
+              "bg-gradient-to-br from-teal-600 to-teal-800 text-white",
+              "shadow-[0_4px_14px_rgba(15,118,110,0.35)]",
             ].join(" ")}
           >
             Book a Session with Dr. Genevieve

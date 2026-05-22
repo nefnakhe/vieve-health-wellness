@@ -6,7 +6,7 @@ interface LogoProps {
 
 // Icon-only SVG mark — reused in both HTML and SVG logo variants
 function LogoMark({ size, variant }: { size: number; variant: "dark" | "light" | "icon-only" }) {
-  const bg = variant === "dark" ? "#166534" : "rgba(255,255,255,0.18)";
+  const bg = variant === "dark" ? "#0f766e" : "rgba(255,255,255,0.18)";
   const ring = variant === "light" ? "rgba(255,255,255,0.3)" : "none";
   return (
     <svg
@@ -68,7 +68,7 @@ export default function Logo({ variant = "dark", className = "", size = "md" }: 
           className={`${t.name} font-bold tracking-tight`}
           style={{
             fontFamily: "Georgia, 'Times New Roman', serif",
-            color: isLight ? "#ffffff" : "#166534",
+            color: isLight ? "#ffffff" : "#0f766e",
             lineHeight: 1.1,
           }}
         >

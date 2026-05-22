@@ -52,13 +52,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-green-950 text-white">
+    <footer className="bg-teal-950 text-white">
 
       {/* ── Newsletter strip ─────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #166534 0%, #14532d 60%, #166534 100%)",
+          background: "linear-gradient(135deg, #0f766e 0%, #115e59 60%, #0f766e 100%)",
           boxShadow: "inset 0 -2px 12px rgba(0,0,0,0.2)",
         }}
       >
@@ -78,7 +78,7 @@ export default function Footer() {
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 leading-tight">
             Join the Vieve Wellness Community
           </h3>
-          <p className="text-green-200 mb-7 text-sm sm:text-base leading-relaxed">
+          <p className="text-teal-200 mb-7 text-sm sm:text-base leading-relaxed">
             Get culturally relevant diabetes education, wellness tips, recipes, and free
             resources delivered to your inbox.
           </p>
@@ -95,10 +95,7 @@ export default function Footer() {
             <div className="mb-4">
               <Logo variant="light" size="sm" />
             </div>
-            <p className="text-green-300 text-sm italic mb-3 leading-relaxed">
-              Where Diabetes Education Meets Empowerment
-            </p>
-            <p className="text-green-500 text-sm leading-relaxed mb-6">
+            <p className="text-teal-500 text-sm leading-relaxed mb-6">
               Helping African and diaspora communities better understand diabetes,
               nutrition, and wellness through culturally relevant education.
             </p>
@@ -113,7 +110,7 @@ export default function Footer() {
                   aria-label={label}
                   className={[
                     "p-2.5 rounded-full transition-all duration-200",
-                    "bg-green-800/60 border border-green-700/50 text-green-300",
+                    "bg-teal-800/60 border border-teal-700/50 text-teal-300",
                     "hover:bg-amber-500 hover:border-amber-400 hover:text-white",
                     "hover:shadow-[0_4px_14px_rgba(245,158,11,0.4)]",
                     "hover:-translate-y-0.5",
@@ -135,7 +132,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-green-400 hover:text-amber-400 text-sm transition-colors hover:translate-x-1 inline-block"
+                    className="text-teal-400 hover:text-amber-400 text-sm transition-colors hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -154,7 +151,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-green-400 hover:text-amber-400 text-sm transition-colors leading-snug block hover:translate-x-1"
+                    className="text-teal-400 hover:text-amber-400 text-sm transition-colors leading-snug block hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
@@ -175,7 +172,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="mailto:info@vievehealthwellness.com"
-                  className="text-green-400 hover:text-amber-400 text-sm transition-colors break-all"
+                  className="text-teal-400 hover:text-amber-400 text-sm transition-colors break-all"
                 >
                   info@vievehealthwellness.com
                 </a>
@@ -184,16 +181,16 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={14} className="text-amber-400" />
                 </div>
-                <span className="text-green-500 text-sm leading-relaxed">
+                <span className="text-teal-500 text-sm leading-relaxed">
                   Serving the African & diaspora community worldwide via telehealth
                 </span>
               </li>
             </ul>
 
-            <div className="mt-6 p-4 rounded-xl bg-green-900/70 border border-green-800/50
+            <div className="mt-6 p-4 rounded-xl bg-teal-900/70 border border-teal-800/50
               shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-              <p className="text-green-400 text-xs leading-relaxed">
-                <strong className="text-green-300">Disclaimer:</strong> Content on this
+              <p className="text-teal-400 text-xs leading-relaxed">
+                <strong className="text-teal-300">Disclaimer:</strong> Content on this
                 website is for educational purposes only and does not constitute medical advice.
                 Always consult your healthcare provider for personalized guidance.
               </p>
@@ -202,16 +199,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-green-900/70
+        <div className="mt-12 pt-8 border-t border-teal-900/70
           flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-green-700 text-xs text-center sm:text-left">
+          <p className="text-teal-700 text-xs text-center sm:text-left">
             © {new Date().getFullYear()} Vieve Health and Wellness. All rights reserved.
           </p>
           <div className="flex gap-5">
-            <Link href="/privacy" className="text-green-700 hover:text-green-400 text-xs transition-colors">
+            <Link href="/privacy" className="text-teal-700 hover:text-teal-400 text-xs transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-green-700 hover:text-green-400 text-xs transition-colors">
+            <Link href="/terms" className="text-teal-700 hover:text-teal-400 text-xs transition-colors">
               Terms of Use
             </Link>
           </div>
