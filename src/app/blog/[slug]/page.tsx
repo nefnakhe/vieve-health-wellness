@@ -83,8 +83,9 @@ export default async function BlogPostPage({ params }: Props) {
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 
+  const relatedSlugs = new Set(relatedPosts.map((p) => p.slug));
   const morePostsFallback = blogPosts
-    .filter((p) => p.slug !== slug)
+    .filter((p) => p.slug !== slug && !relatedSlugs.has(p.slug))
     .slice(0, 3 - relatedPosts.length);
 
   const suggestedPosts = [...relatedPosts, ...morePostsFallback].slice(0, 3);
@@ -123,19 +124,21 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Feature Image */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-1">
-        <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl -mb-8 relative z-10">
-          <FadeImage
-            src={post.image}
-            alt={post.title}
-            fill
-            className="object-cover opacity-0 transition-opacity duration-700"
-          />
+      <div className="bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-0">
+          <div className="relative h-72 sm:h-[420px] rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-[0_8px_40px_rgba(0,0,0,0.18)]">
+            <FadeImage
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
       {/* Article Content */}
-      <section className="pt-16 pb-20 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Main Content */}
