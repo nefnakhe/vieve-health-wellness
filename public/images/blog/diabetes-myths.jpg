@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400e" />
+      <stop offset="100%" style="stop-color:#78350f" />
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="white" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <text x="600" y="301" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">Blog: Diabetes Myths</text>
+  <text x="600" y="329" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">in African Communities</text>
+  <text x="600" y="610" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" opacity="0.5">Vieve Health &amp; Wellness</text>
+</svg>

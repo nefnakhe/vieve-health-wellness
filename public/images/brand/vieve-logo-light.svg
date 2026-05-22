@@ -1,0 +1,37 @@
+<svg width="280" height="72" viewBox="0 0 280 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Vieve Health &amp; Wellness">
+
+  <!-- Icon mark circle -->
+  <circle cx="36" cy="36" r="36" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="36" cy="36" r="36" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+
+  <!-- Leaf shape inside circle -->
+  <path
+    d="M36 58 C36 58 16 46 16 30 C16 20 25 14 36 22 C47 14 56 20 56 30 C56 46 36 58 36 58Z"
+    fill="white" fill-opacity="0.15"
+    stroke="white" stroke-width="2" stroke-linejoin="round"
+  />
+
+  <!-- Heartbeat / pulse line through leaf -->
+  <path
+    d="M20 36 L26 36 L30 27 L36 44 L41 31 L45 37 L52 37"
+    stroke="white" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+
+  <!-- Wordmark: Vieve -->
+  <text
+    x="84" y="44"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="36" font-weight="700"
+    fill="white" letter-spacing="-0.5"
+  >Vieve</text>
+
+  <!-- Sub-tagline: HEALTH &amp; WELLNESS -->
+  <text
+    x="85" y="62"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13" font-weight="500"
+    fill="#fbbf24" letter-spacing="2.5"
+  >HEALTH &amp; WELLNESS</text>
+
+</svg>

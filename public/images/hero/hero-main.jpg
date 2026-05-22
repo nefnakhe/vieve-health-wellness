@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534" />
+      <stop offset="100%" style="stop-color:#14532d" />
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="white" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <text x="960" y="512" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">Hero Image</text>
+  <text x="960" y="540" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">(Upload: African family</text>
+  <text x="960" y="568" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">or community photo)</text>
+  <text x="960" y="1060" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" opacity="0.5">Vieve Health &amp; Wellness</text>
+</svg>
