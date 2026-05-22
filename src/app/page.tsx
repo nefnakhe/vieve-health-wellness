@@ -267,130 +267,157 @@ export default function Home() {
 
       {/* ── WHY VIEVE EXISTS ──────────────────────────── */}
       <section
-        className="relative py-20 sm:py-28 overflow-hidden"
-        style={{ background: "linear-gradient(150deg, #f0fdfa 0%, #ccfbf1 45%, #f0fdfa 100%)" }}
+        className="relative overflow-hidden py-24 sm:py-32"
+        style={{ background: "linear-gradient(160deg, #042f2e 0%, #0f766e 55%, #115e59 100%)" }}
       >
-        {/* Depth orbs */}
-        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(15,118,110,0.1) 0%, transparent 65%)" }} />
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(13,148,136,0.08) 0%, transparent 65%)" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(ellipse, rgba(245,158,11,0.04) 0%, transparent 60%)" }} />
+        {/* Subtle dot pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+        {/* Amber accent glow top-right */}
+        <div className="absolute -top-20 right-0 w-[480px] h-[480px] pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 65%)" }} />
+        {/* Teal glow bottom-left */}
+        <div className="absolute bottom-0 -left-20 w-80 h-80 pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(13,148,136,0.2) 0%, transparent 70%)" }} />
 
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Label */}
-          <div className="flex justify-center mb-6">
-            <span className="inline-flex items-center gap-2 text-teal-700 font-semibold text-xs uppercase tracking-widest bg-white/80 border border-teal-200 px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(15,118,110,0.1)] backdrop-blur-sm">
-              Our Mission
-            </span>
+            {/* Left — large editorial statement */}
+            <div>
+              <p className="text-teal-400 text-xs font-bold uppercase tracking-[0.25em] mb-6">
+                Our Mission
+              </p>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8">
+                Health education{" "}
+                <em className="not-italic text-amber-400">built for us.</em>
+              </h2>
+              <p className="text-teal-200 text-lg leading-relaxed max-w-lg mb-10">
+                Many diabetes resources were never designed with African and diaspora communities
+                in mind. At Vieve, we start with your table, your traditions, and your life —
+                then build education around them.
+              </p>
+              <div className="h-px bg-gradient-to-r from-teal-500/60 via-amber-400/40 to-transparent mb-10" />
+              <p className="text-white text-xl font-semibold leading-relaxed">
+                Practical. Empowering.{" "}
+                <span className="text-amber-300">Culturally relevant.</span>
+              </p>
+            </div>
+
+            {/* Right — four statement lines */}
+            <div className="space-y-px">
+              {[
+                { label: "Our Foods",        body: "From jollof rice to eba to plantain — education that begins at your table, not a lab.",   num: "01" },
+                { label: "Our Culture",      body: "The celebrations, traditions, and family values that define how our communities eat.",     num: "02" },
+                { label: "Our Lifestyles",   body: "Practical, real-world guidance designed for African and diaspora life — not a textbook.", num: "03" },
+                { label: "Our Experiences",  body: "No judgment. No elimination lists. Just honest, grounded, empowering guidance.",          num: "04" },
+              ].map((item, i) => (
+                <div
+                  key={item.label}
+                  className="group flex items-start gap-5 py-6 border-b border-white/10 hover:border-amber-400/40 transition-all duration-300 cursor-default"
+                >
+                  <span className="text-xs font-bold text-teal-500 group-hover:text-amber-400 mt-1 transition-colors duration-300 shrink-0 w-6">
+                    {item.num}
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="text-white font-bold text-lg mb-1 group-hover:text-amber-300 transition-colors duration-300">
+                      {item.label}
+                    </h3>
+                    <p className="text-teal-300 text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                  <ChevronRight
+                    size={16}
+                    className="text-teal-600 group-hover:text-amber-400 group-hover:translate-x-1 transition-all duration-300 mt-1.5 shrink-0"
+                  />
+                </div>
+              ))}
+            </div>
+
           </div>
-
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-950 text-center leading-tight mb-6">
-            Why Vieve Health and Wellness Exists
-          </h2>
-
-          {/* Intro */}
-          <p className="text-gray-600 text-lg text-center leading-relaxed max-w-3xl mx-auto mb-14">
-            Many diabetes resources were not created with African and diaspora communities in mind.
-            Generic health education fails to reflect the foods we grew up eating, the cultures we
-            celebrate, or the real-life experiences we navigate every day.
-          </p>
-
-          {/* Four pillars */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {[
-              { title: "Our Foods",       body: "From jollof rice to eba to plantain — education that starts at your table.",      bar: "#0f766e" },
-              { title: "Our Culture",     body: "The celebrations, traditions, and family values that shape how we eat and live.",  bar: "#0d9488" },
-              { title: "Our Lifestyles",  body: "Practical guidance built for real African and diaspora life — not generic advice.", bar: "#0f766e" },
-              { title: "Our Experiences", body: "No judgment. No elimination. Just empowering, culturally grounded education.",     bar: "#d97706" },
-            ].map((p) => (
-              <div
-                key={p.title}
-                className="bg-white rounded-2xl p-6 border border-teal-100 shadow-[0_2px_8px_rgba(15,118,110,0.07),0_6px_24px_rgba(15,118,110,0.05)] hover:shadow-[0_8px_32px_rgba(15,118,110,0.13)] hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="w-10 h-1 rounded-full mb-4" style={{ background: p.bar }} />
-                <h3 className="font-bold text-teal-900 text-base mb-2">{p.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Mission statement block */}
-          <div
-            className="relative rounded-2xl px-8 py-7 text-center overflow-hidden shadow-[0_8px_32px_rgba(15,118,110,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]"
-            style={{ background: "linear-gradient(120deg, #115e59 0%, #0f766e 50%, #115e59 100%)" }}
-          >
-            <div className="absolute inset-0 pointer-events-none"
-              style={{ background: "radial-gradient(ellipse 70% 80% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%)" }} />
-            <p className="relative text-lg sm:text-xl font-semibold text-white leading-relaxed">
-              Our mission:{" "}
-              <span className="text-amber-300">
-                make diabetes education practical, empowering, and culturally relevant.
-              </span>
-            </p>
-          </div>
-
         </div>
       </section>
 
       {/* ── WHAT WE TEACH ─────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-              Education Topics
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">
-              What We Teach
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Practical, culturally relevant education across every area that
-              matters for your health journey.
+      <section className="relative py-24 sm:py-32 bg-white overflow-hidden">
+        {/* Faint teal wash behind content */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(15,118,110,0.04) 0%, transparent 70%)" }} />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header row */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
+            <div className="max-w-xl">
+              <p className="text-teal-600 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+                Education Topics
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-950 leading-tight">
+                What We Teach
+              </h2>
+            </div>
+            <p className="text-gray-500 text-base leading-relaxed max-w-sm sm:text-right">
+              Eight areas of practical, culturally grounded education — all under one roof.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {whatWeTeach.map((item) => (
+          {/* Two-column feature list */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-0 mb-14">
+            {whatWeTeach.map((item, i) => (
               <div
                 key={item.title}
-                className={[
-                  "bg-white rounded-2xl p-6 border border-gray-100 group",
-                  "shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.05)]",
-                  "hover:shadow-[0_6px_24px_rgba(0,0,0,0.1),0_2px_8px_rgba(15,118,110,0.08)]",
-                  "hover:-translate-y-1.5 transition-all duration-300",
-                ].join(" ")}
+                className="group flex items-start gap-5 py-7 border-b border-gray-100 hover:border-teal-200 transition-colors duration-300"
               >
-                <div className={[
-                  "w-12 h-12 rounded-xl flex items-center justify-center mb-4",
-                  "bg-teal-50 group-hover:bg-teal-100",
-                  "shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_2px_6px_rgba(15,118,110,0.12)]",
-                  "transition-all duration-300",
-                ].join(" ")}>
-                  <item.icon size={22} className="text-teal-700 icon-glow-green" />
+                {/* Large index number */}
+                <span
+                  className="text-5xl font-black leading-none shrink-0 select-none transition-colors duration-300"
+                  style={{
+                    color: "transparent",
+                    WebkitTextStroke: "1.5px",
+                    WebkitTextStrokeColor: i % 2 === 0 ? "rgba(15,118,110,0.2)" : "rgba(245,158,11,0.2)",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1 pt-1">
+                  <div className="flex items-center gap-2.5 mb-1.5">
+                    <item.icon
+                      size={16}
+                      className="text-teal-600 group-hover:text-amber-500 transition-colors duration-300 shrink-0"
+                    />
+                    <h3 className="font-bold text-gray-900 text-base group-hover:text-teal-800 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-500 text-sm leading-relaxed pl-[26px]">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 text-base">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/work-with-me"
               className={[
-                "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
+                "inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white",
                 "bg-gradient-to-br from-teal-600 to-teal-800",
                 "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
                 "hover:from-teal-500 hover:to-teal-700 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
-              Explore Our Programs <ChevronRight size={16} />
+              Explore All Programs <ChevronRight size={15} />
+            </Link>
+            <Link
+              href="/blog"
+              className="text-teal-700 hover:text-teal-900 font-semibold text-sm underline underline-offset-4 decoration-teal-200 hover:decoration-teal-500 transition-all duration-200"
+            >
+              Or browse our free articles →
             </Link>
           </div>
+
         </div>
       </section>
 
