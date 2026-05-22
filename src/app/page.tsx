@@ -266,74 +266,73 @@ export default function Home() {
       </section>
 
       {/* ── WHY VIEVE EXISTS ──────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-                Our Mission
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6 leading-tight">
-                Why Vieve Health & Wellness Exists
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                Many diabetes resources were not created with African and diaspora
-                communities in mind. Generic health education often fails to reflect
-                the foods we grew up eating, the cultures we celebrate, or the real
-                life experiences we navigate every day.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                At Vieve Health & Wellness, we believe health education should reflect:
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Our foods — from jollof rice to eba to plantain",
-                  "Our culture — the celebrations, the traditions, the family table",
-                  "Our lifestyles — practical guidance that fits real African life",
-                  "Our real-life experiences — no judgment, just empowerment",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-teal-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-teal-600 rounded-full" />
-                    </div>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-teal-800 font-semibold text-lg">
-                Our mission: make diabetes education practical, empowering, and culturally relevant.
-              </p>
-            </div>
+      <section
+        className="relative py-20 sm:py-28 overflow-hidden"
+        style={{ background: "linear-gradient(150deg, #f0fdfa 0%, #ccfbf1 45%, #f0fdfa 100%)" }}
+      >
+        {/* Depth orbs */}
+        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(15,118,110,0.1) 0%, transparent 65%)" }} />
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(13,148,136,0.08) 0%, transparent 65%)" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(245,158,11,0.04) 0%, transparent 60%)" }} />
 
-            {/* Image / Visual */}
-            <div className="relative">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl">
-                <FadeImage
-                  src="/images/hero/hero-secondary.jpg"
-                  alt="Culturally relevant wellness education"
-                  fill
-                  className="object-cover object-top"
-                />
-                {/* Overlay card */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.18)]">
-                  <p className="text-teal-900 font-bold text-lg mb-1">
-                    "Finally, education that feels like it was made for us."
-                  </p>
-                  <p className="text-gray-500 text-sm">— Community Member</p>
-                </div>
-              </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-              {/* Floating badge */}
-              <div className={[
-                "absolute -top-4 -right-4 text-white rounded-2xl p-4",
-                "bg-gradient-to-br from-amber-400 to-amber-600",
-                "shadow-[0_8px_24px_rgba(245,158,11,0.5)]",
-              ].join(" ")}>
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-xs font-medium">Community Members</div>
-              </div>
-            </div>
+          {/* Label */}
+          <div className="flex justify-center mb-6">
+            <span className="inline-flex items-center gap-2 text-teal-700 font-semibold text-xs uppercase tracking-widest bg-white/80 border border-teal-200 px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(15,118,110,0.1)] backdrop-blur-sm">
+              Our Mission
+            </span>
           </div>
+
+          {/* Heading */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-950 text-center leading-tight mb-6">
+            Why Vieve Health and Wellness Exists
+          </h2>
+
+          {/* Intro */}
+          <p className="text-gray-600 text-lg text-center leading-relaxed max-w-3xl mx-auto mb-14">
+            Many diabetes resources were not created with African and diaspora communities in mind.
+            Generic health education fails to reflect the foods we grew up eating, the cultures we
+            celebrate, or the real-life experiences we navigate every day.
+          </p>
+
+          {/* Four pillars */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {[
+              { title: "Our Foods",       body: "From jollof rice to eba to plantain — education that starts at your table.",      bar: "#0f766e" },
+              { title: "Our Culture",     body: "The celebrations, traditions, and family values that shape how we eat and live.",  bar: "#0d9488" },
+              { title: "Our Lifestyles",  body: "Practical guidance built for real African and diaspora life — not generic advice.", bar: "#0f766e" },
+              { title: "Our Experiences", body: "No judgment. No elimination. Just empowering, culturally grounded education.",     bar: "#d97706" },
+            ].map((p) => (
+              <div
+                key={p.title}
+                className="bg-white rounded-2xl p-6 border border-teal-100 shadow-[0_2px_8px_rgba(15,118,110,0.07),0_6px_24px_rgba(15,118,110,0.05)] hover:shadow-[0_8px_32px_rgba(15,118,110,0.13)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-10 h-1 rounded-full mb-4" style={{ background: p.bar }} />
+                <h3 className="font-bold text-teal-900 text-base mb-2">{p.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Mission statement block */}
+          <div
+            className="relative rounded-2xl px-8 py-7 text-center overflow-hidden shadow-[0_8px_32px_rgba(15,118,110,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]"
+            style={{ background: "linear-gradient(120deg, #115e59 0%, #0f766e 50%, #115e59 100%)" }}
+          >
+            <div className="absolute inset-0 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse 70% 80% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%)" }} />
+            <p className="relative text-lg sm:text-xl font-semibold text-white leading-relaxed">
+              Our mission:{" "}
+              <span className="text-amber-300">
+                make diabetes education practical, empowering, and culturally relevant.
+              </span>
+            </p>
+          </div>
+
         </div>
       </section>
 
