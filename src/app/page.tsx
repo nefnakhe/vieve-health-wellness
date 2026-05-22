@@ -4,7 +4,6 @@ import {
   BookOpen,
   Heart,
   Users,
-  Star,
   ChevronRight,
   Download,
   Apple,
@@ -14,7 +13,6 @@ import {
   Calendar,
   Sprout,
   HomeIcon,
-  Clock,
 } from "lucide-react";
 import NewsletterForm from "@/components/NewsletterForm";
 import BlogCard from "@/components/BlogCard";
@@ -77,26 +75,7 @@ const whatWeTeach = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Finally, diabetes education that reflects our culture and our foods. I no longer feel like I have to choose between my health and my heritage.",
-    name: "Community Member",
-    location: "Houston, TX",
-  },
-  {
-    quote:
-      "Dr. Genevieve explains diabetes in a practical and empowering way. She makes you feel seen and understood, not judged.",
-    name: "Wellness Community Member",
-    location: "Atlanta, GA",
-  },
-  {
-    quote:
-      "I appreciate learning how to manage my blood sugar without giving up all my traditional foods. The portion guidance alone changed everything for me.",
-    name: "Program Participant",
-    location: "Maryland",
-  },
-];
+
 
 const freeResources = [
   {
@@ -637,46 +616,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ──────────────────────────────── */}
-      <section className="py-20 bg-amber-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-              Community Impact
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">
-              What the Community Says
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Real experiences from people who found education that finally made sense for their lives.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className={[
-                "bg-white rounded-2xl p-8 border border-amber-100",
-                "shadow-[0_2px_8px_rgba(0,0,0,0.06),0_6px_20px_rgba(245,158,11,0.06)]",
-                "hover:shadow-[0_8px_30px_rgba(245,158,11,0.15)] hover:-translate-y-1",
-                "transition-all duration-300",
-              ].join(" ")}>
-                <div className="flex gap-1 mb-5">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={16} fill="#f59e0b" className="text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
-                  <div className="text-gray-500 text-xs mt-0.5">{t.location}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── FINAL CTA ─────────────────────────────────── */}
       <section
