@@ -140,103 +140,126 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO SECTION ──────────────────────────────── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <FadeImage
-            src="/images/hero/hero-main.jpg"
-            alt="African family enjoying a healthy meal together"
-            fill
-            priority
-            className="object-cover opacity-0 transition-opacity duration-700"
-          />
-          {/* Decorative pattern overlay */}
-          <div className="absolute inset-0 opacity-5"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          />
-        </div>
+      <section
+        className="relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #042f2e 0%, #115e59 60%, #0f766e 100%)" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[92vh]">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-3xl">
-            {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Culturally Relevant{" "}
-              <span className="text-amber-400">Diabetes Education</span> for
-              Africans & the Diaspora
-            </h1>
+            {/* ── Left: Text content ── */}
+            <div className="flex flex-col justify-center py-24 lg:py-32 lg:pr-12 relative z-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Culturally Relevant{" "}
+                <span className="text-amber-400">Diabetes Education</span>{" "}
+                for Africans &amp; the Diaspora
+              </h1>
 
-            {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-teal-200 leading-relaxed mb-10 max-w-2xl">
-              Helping individuals and families better understand diabetes, food,
-              weight management, and healthy living through practical, culturally
-              informed education.
-            </p>
+              <p className="text-lg sm:text-xl text-teal-200 leading-relaxed mb-10 max-w-xl">
+                Helping individuals and families better understand diabetes, food,
+                weight management, and healthy living through practical, culturally
+                informed education.
+              </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-12">
-              <Link
-                href="/blog"
-                className={[
-                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold",
-                  "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
-                  "shadow-[0_6px_22px_rgba(245,158,11,0.5),inset_0_1px_0_rgba(255,255,255,0.25)]",
-                  "hover:from-amber-300 hover:to-amber-500 hover:shadow-[0_10px_30px_rgba(245,158,11,0.6)] hover:-translate-y-1",
-                  "active:translate-y-0 transition-all duration-200",
-                ].join(" ")}
-              >
-                <BookOpen size={18} />
-                Start Learning
-              </Link>
-              <Link
-                href="/work-with-me"
-                className={[
-                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
-                  "bg-white/12 backdrop-blur-sm border border-white/30 text-white",
-                  "shadow-[0_4px_14px_rgba(0,0,0,0.2)]",
-                  "hover:bg-white/20 hover:border-white/50 hover:shadow-[0_8px_22px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
-                  "active:translate-y-0 transition-all duration-200",
-                ].join(" ")}
-              >
-                Book a Session
-              </Link>
-              <Link
-                href="/resources"
-                className={[
-                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
-                  "border border-teal-400/50 text-teal-200",
-                  "hover:bg-white/10 hover:border-teal-300 hover:text-white hover:-translate-y-0.5",
-                  "active:translate-y-0 transition-all duration-200",
-                ].join(" ")}
-              >
-                <Download size={18} />
-                Free Guides
-              </Link>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-12">
+                <Link
+                  href="/blog"
+                  className={[
+                    "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold",
+                    "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
+                    "shadow-[0_6px_22px_rgba(245,158,11,0.5),inset_0_1px_0_rgba(255,255,255,0.25)]",
+                    "hover:from-amber-300 hover:to-amber-500 hover:shadow-[0_10px_30px_rgba(245,158,11,0.6)] hover:-translate-y-1",
+                    "active:translate-y-0 transition-all duration-200",
+                  ].join(" ")}
+                >
+                  <BookOpen size={18} />
+                  Start Learning
+                </Link>
+                <Link
+                  href="/work-with-me"
+                  className={[
+                    "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
+                    "bg-white/10 backdrop-blur-sm border border-white/30 text-white",
+                    "shadow-[0_4px_14px_rgba(0,0,0,0.2)]",
+                    "hover:bg-white/20 hover:border-white/50 hover:shadow-[0_8px_22px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
+                    "active:translate-y-0 transition-all duration-200",
+                  ].join(" ")}
+                >
+                  Book a Session
+                </Link>
+                <Link
+                  href="/resources"
+                  className={[
+                    "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
+                    "border border-teal-400/50 text-teal-200",
+                    "hover:bg-white/10 hover:border-teal-300 hover:text-white hover:-translate-y-0.5",
+                    "active:translate-y-0 transition-all duration-200",
+                  ].join(" ")}
+                >
+                  <Download size={18} />
+                  Free Guides
+                </Link>
+              </div>
+
+              {/* Social proof pills */}
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { icon: BookOpen, text: "Evidence-based education" },
+                  { icon: Heart, text: "Culturally informed" },
+                  { icon: Users, text: "Community-centered" },
+                ].map((item) => (
+                  <div
+                    key={item.text}
+                    className="flex items-center gap-2 text-teal-100 text-sm bg-white/8 border border-white/15 px-3.5 py-1.5 rounded-full backdrop-blur-sm"
+                  >
+                    <item.icon size={13} className="text-amber-400" />
+                    {item.text}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Social proof strip */}
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: BookOpen, text: "Evidence-based education" },
-                { icon: Heart, text: "Culturally informed" },
-                { icon: Users, text: "Community-centered" },
-              ].map((item) => (
-                <div key={item.text}
-                  className="flex items-center gap-2 text-teal-200 text-sm
-                    bg-white/8 border border-white/15 px-3 py-1.5 rounded-full
-                    backdrop-blur-sm">
-                  <item.icon size={14} className="text-amber-400" />
-                  {item.text}
-                </div>
-              ))}
+            {/* ── Right: Hero image ── */}
+            <div className="relative hidden lg:block">
+              {/* Full-height image panel flush to section edge */}
+              <div className="absolute inset-0">
+                <FadeImage
+                  src="/images/hero/hero-main.jpg"
+                  alt="Culturally relevant diabetes education — Vieve Health and Wellness"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                />
+                {/* Left-side fade so text panel blends cleanly */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to right, #042f2e 0%, rgba(4,47,46,0.5) 30%, transparent 65%)",
+                  }}
+                />
+              </div>
             </div>
+
           </div>
         </div>
 
+        {/* Mobile: image behind text at reduced opacity */}
+        <div className="absolute inset-0 lg:hidden">
+          <FadeImage
+            src="/images/hero/hero-main.jpg"
+            alt="Culturally relevant diabetes education — Vieve Health and Wellness"
+            fill
+            priority
+            className="object-cover object-top"
+          />
+          <div className="absolute inset-0" style={{ background: "rgba(4,47,46,0.78)" }} />
+        </div>
+
         {/* Bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: "block" }}>
             <path d="M0 80L1440 80L1440 40C1200 80 900 0 720 20C540 40 240 80 0 40L0 80Z" fill="white" />
           </svg>
         </div>
@@ -286,10 +309,10 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl">
                 <FadeImage
-                  src="/images/community/african-family-meal.jpg"
-                  alt="African family enjoying a healthy meal together"
+                  src="/images/hero/hero-secondary.jpg"
+                  alt="Culturally relevant wellness education"
                   fill
-                  className="object-cover opacity-0 transition-opacity duration-700"
+                  className="object-cover object-top"
                 />
                 {/* Overlay card */}
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.18)]">
