@@ -19,20 +19,22 @@ export default function BlogCard({ post, featured = false }: Props) {
       >
         <div className="lg:flex">
           <div className="lg:w-1/2 relative h-64 lg:h-auto bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center">
-            <div className="absolute inset-0">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover opacity-0 group-hover:opacity-100 transition-opacity"
-                onLoad={(e) => {
-                  (e.target as HTMLImageElement).style.opacity = "1";
-                }}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
-            </div>
+            {post.image && (
+              <div className="absolute inset-0">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                  onLoad={(e) => {
+                    (e.target as HTMLImageElement).style.opacity = "1";
+                  }}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              </div>
+            )}
             <div className="relative z-10 text-center px-6">
               <span className="inline-block px-3 py-1 bg-amber-500 text-white text-xs font-bold rounded-full uppercase tracking-wider mb-3">
                 Featured
@@ -73,18 +75,20 @@ export default function BlogCard({ post, featured = false }: Props) {
       className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-300"
     >
       <div className="relative h-48 bg-gradient-to-br from-teal-700 to-teal-900 overflow-hidden">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover opacity-0 transition-opacity duration-500"
-          onLoad={(e) => {
-            (e.target as HTMLImageElement).style.opacity = "1";
-          }}
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.display = "none";
-          }}
-        />
+        {post.image && (
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="object-cover opacity-0 transition-opacity duration-500"
+            onLoad={(e) => {
+              (e.target as HTMLImageElement).style.opacity = "1";
+            }}
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = "none";
+            }}
+          />
+        )}
         <div className="absolute top-4 left-4">
           <span className="inline-flex items-center gap-1.5 text-xs text-white font-medium bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
             <Tag size={11} />

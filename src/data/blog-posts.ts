@@ -132,7 +132,7 @@ No single food causes diabetes, and no single food needs to be completely elimin
     date: "April 28, 2026",
     category: "African Foods & Blood Sugar",
     readTime: "4 min read",
-    image: "/images/blog/plantain-diabetes.jpg",
+    image: "", // awaiting client upload — place at /images/blog/plantain-diabetes.jpg
     content: `
 ## Is Plantain Good for Diabetes?
 

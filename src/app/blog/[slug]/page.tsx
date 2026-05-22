@@ -123,19 +123,21 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Feature Image */}
-      <div className="bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-0">
-          <div className="relative h-72 sm:h-[420px] rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-[0_8px_40px_rgba(0,0,0,0.18)]">
-            <FadeImage
-              src={post.image}
-              alt={post.title}
-              fill
-              className="object-cover"
-            />
+      {/* Feature Image — only rendered when an image exists */}
+      {post.image && (
+        <div className="bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-0">
+            <div className="relative h-72 sm:h-[420px] rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-[0_8px_40px_rgba(0,0,0,0.18)]">
+              <FadeImage
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Article Content */}
       <section className="pt-10 pb-20 bg-white">
