@@ -12,7 +12,6 @@ function InstagramIcon() {
     </svg>
   );
 }
-
 function FacebookIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -20,7 +19,6 @@ function FacebookIcon() {
     </svg>
   );
 }
-
 function YoutubeIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,81 +44,98 @@ const blogLinks = [
   { href: "/blog/common-diabetes-myths-in-african-communities", label: "Diabetes Myths Debunked" },
 ];
 
+const socialLinks = [
+  { href: "https://instagram.com/vievehealthwellness", label: "Instagram", Icon: InstagramIcon },
+  { href: "https://facebook.com/vievehealthwellness", label: "Facebook", Icon: FacebookIcon },
+  { href: "https://youtube.com/@vievehealthwellness", label: "YouTube", Icon: YoutubeIcon },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-green-950 text-white">
-      {/* Newsletter Strip */}
-      <div className="bg-green-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Join the Vieve Wellness Community
-            </h3>
-            <p className="text-green-200 mb-6 text-sm">
-              Get culturally relevant diabetes education, wellness tips, recipes, and free resources delivered to your inbox.
-            </p>
-            <NewsletterForm variant="footer" />
+
+      {/* ── Newsletter strip ─────────────────────────────────────── */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #166534 0%, #14532d 60%, #166534 100%)",
+          boxShadow: "inset 0 -2px 12px rgba(0,0,0,0.2)",
+        }}
+      >
+        {/* Subtle pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='white'/%3E%3C/svg%3E")`,
+          }}
+        />
+        <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+          {/* Glow ring behind icon */}
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-5
+            bg-white/10 shadow-[0_0_30px_rgba(251,191,36,0.25)] border border-white/20">
+            <Mail size={22} className="text-amber-300" />
           </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 leading-tight">
+            Join the Vieve Wellness Community
+          </h3>
+          <p className="text-green-200 mb-7 text-sm sm:text-base leading-relaxed">
+            Get culturally relevant diabetes education, wellness tips, recipes, and free
+            resources delivered to your inbox.
+          </p>
+          <NewsletterForm variant="footer" />
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Column */}
-          <div className="lg:col-span-1">
+      {/* ── Main footer ──────────────────────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4">
               <Logo variant="light" size="sm" />
             </div>
-            <p className="text-green-300 text-sm italic mb-4">
+            <p className="text-green-300 text-sm italic mb-3 leading-relaxed">
               Where Diabetes Education Meets Empowerment
             </p>
-            <p className="text-green-400 text-sm leading-relaxed mb-6">
+            <p className="text-green-500 text-sm leading-relaxed mb-6">
               Helping African and diaspora communities better understand diabetes,
               nutrition, and wellness through culturally relevant education.
             </p>
-            <div className="flex space-x-3">
-              <a
-                href="https://instagram.com/vievehealthwellness"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="p-2 bg-green-800 hover:bg-green-700 rounded-full transition-colors"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://facebook.com/vievehealthwellness"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="p-2 bg-green-800 hover:bg-green-700 rounded-full transition-colors"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://youtube.com/@vievehealthwellness"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="p-2 bg-green-800 hover:bg-green-700 rounded-full transition-colors"
-              >
-                <YoutubeIcon />
-              </a>
+            {/* Social icons */}
+            <div className="flex gap-2">
+              {socialLinks.map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={[
+                    "p-2.5 rounded-full transition-all duration-200",
+                    "bg-green-800/60 border border-green-700/50 text-green-300",
+                    "hover:bg-amber-500 hover:border-amber-400 hover:text-white",
+                    "hover:shadow-[0_4px_14px_rgba(245,158,11,0.4)]",
+                    "hover:-translate-y-0.5",
+                  ].join(" ")}
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-widest">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-green-400 hover:text-amber-400 text-sm transition-colors"
+                    className="text-green-400 hover:text-amber-400 text-sm transition-colors hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -131,15 +146,15 @@ export default function Footer() {
 
           {/* Popular Articles */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-widest">
               Popular Articles
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {blogLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-green-400 hover:text-amber-400 text-sm transition-colors leading-snug block"
+                    className="text-green-400 hover:text-amber-400 text-sm transition-colors leading-snug block hover:translate-x-1"
                   >
                     {link.label}
                   </Link>
@@ -150,47 +165,53 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-widest">
               Contact
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <Mail size={16} className="text-amber-400 mt-0.5 shrink-0" />
+              <li className="flex items-start gap-3">
+                <div className="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <Mail size={14} className="text-amber-400" />
+                </div>
                 <a
                   href="mailto:info@vievehealthwellness.com"
-                  className="text-green-400 hover:text-amber-400 text-sm transition-colors"
+                  className="text-green-400 hover:text-amber-400 text-sm transition-colors break-all"
                 >
                   info@vievehealthwellness.com
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin size={16} className="text-amber-400 mt-0.5 shrink-0" />
-                <span className="text-green-400 text-sm">
+              <li className="flex items-start gap-3">
+                <div className="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin size={14} className="text-amber-400" />
+                </div>
+                <span className="text-green-500 text-sm leading-relaxed">
                   Serving the African & diaspora community worldwide via telehealth
                 </span>
               </li>
             </ul>
 
-            <div className="mt-6 p-4 bg-green-900 rounded-xl">
-              <p className="text-green-300 text-xs leading-relaxed">
-                <strong className="text-green-200">Disclaimer:</strong> Content on this
-                website is for educational purposes only and does not constitute medical
-                advice. Always consult your healthcare provider for personalized medical guidance.
+            <div className="mt-6 p-4 rounded-xl bg-green-900/70 border border-green-800/50
+              shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+              <p className="text-green-400 text-xs leading-relaxed">
+                <strong className="text-green-300">Disclaimer:</strong> Content on this
+                website is for educational purposes only and does not constitute medical advice.
+                Always consult your healthcare provider for personalized guidance.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-green-900 flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
-          <p className="text-green-600 text-xs">
-            © {new Date().getFullYear()} Vieve Health & Wellness. All rights reserved.
+        {/* Bottom bar */}
+        <div className="mt-12 pt-8 border-t border-green-900/70
+          flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-green-700 text-xs text-center sm:text-left">
+            © {new Date().getFullYear()} Vieve Health and Wellness. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link href="/privacy" className="text-green-600 hover:text-green-400 text-xs transition-colors">
+          <div className="flex gap-5">
+            <Link href="/privacy" className="text-green-700 hover:text-green-400 text-xs transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-green-600 hover:text-green-400 text-xs transition-colors">
+            <Link href="/terms" className="text-green-700 hover:text-green-400 text-xs transition-colors">
               Terms of Use
             </Link>
           </div>

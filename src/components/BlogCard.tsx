@@ -15,7 +15,7 @@ export default function BlogCard({ post, featured = false }: Props) {
     return (
       <Link
         href={`/blog/${post.slug}`}
-        className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+        className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.06),0_6px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300"
       >
         <div className="lg:flex">
           <div className="lg:w-1/2 relative h-64 lg:h-auto bg-gradient-to-br from-green-700 to-green-900 flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function BlogCard({ post, featured = false }: Props) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
+      className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-300"
     >
       <div className="relative h-48 bg-gradient-to-br from-green-700 to-green-900 overflow-hidden">
         <Image

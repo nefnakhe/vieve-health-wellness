@@ -182,23 +182,40 @@ export default function Home() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-12">
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className={[
+                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold",
+                  "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
+                  "shadow-[0_6px_22px_rgba(245,158,11,0.5),inset_0_1px_0_rgba(255,255,255,0.25)]",
+                  "hover:from-amber-300 hover:to-amber-500 hover:shadow-[0_10px_30px_rgba(245,158,11,0.6)] hover:-translate-y-1",
+                  "active:translate-y-0 transition-all duration-200",
+                ].join(" ")}
               >
                 <BookOpen size={18} />
                 Start Learning
               </Link>
               <Link
                 href="/work-with-me"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-full text-base border border-white/30 transition-all duration-200"
+                className={[
+                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
+                  "bg-white/12 backdrop-blur-sm border border-white/30 text-white",
+                  "shadow-[0_4px_14px_rgba(0,0,0,0.2)]",
+                  "hover:bg-white/20 hover:border-white/50 hover:shadow-[0_8px_22px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
+                  "active:translate-y-0 transition-all duration-200",
+                ].join(" ")}
               >
                 Book a Session
               </Link>
               <Link
                 href="/resources"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent hover:bg-white/10 text-green-200 font-semibold rounded-full text-base border border-green-400/40 transition-all duration-200"
+                className={[
+                  "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold",
+                  "border border-green-400/50 text-green-200",
+                  "hover:bg-white/10 hover:border-green-300 hover:text-white hover:-translate-y-0.5",
+                  "active:translate-y-0 transition-all duration-200",
+                ].join(" ")}
               >
                 <Download size={18} />
                 Free Guides
@@ -206,14 +223,17 @@ export default function Home() {
             </div>
 
             {/* Social proof strip */}
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-4">
               {[
                 { icon: BookOpen, text: "Evidence-based education" },
                 { icon: Heart, text: "Culturally informed" },
                 { icon: Users, text: "Community-centered" },
               ].map((item) => (
-                <div key={item.text} className="flex items-center gap-2 text-green-300 text-sm">
-                  <item.icon size={16} className="text-amber-400" />
+                <div key={item.text}
+                  className="flex items-center gap-2 text-green-200 text-sm
+                    bg-white/8 border border-white/15 px-3 py-1.5 rounded-full
+                    backdrop-blur-sm">
+                  <item.icon size={14} className="text-amber-400" />
                   {item.text}
                 </div>
               ))}
@@ -279,7 +299,7 @@ export default function Home() {
                   className="object-cover opacity-0 transition-opacity duration-700"
                 />
                 {/* Overlay card */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg">
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.18)]">
                   <p className="text-green-900 font-bold text-lg mb-1">
                     "Finally, education that feels like it was made for us."
                   </p>
@@ -288,7 +308,11 @@ export default function Home() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-amber-500 text-white rounded-2xl p-4 shadow-xl">
+              <div className={[
+                "absolute -top-4 -right-4 text-white rounded-2xl p-4",
+                "bg-gradient-to-br from-amber-400 to-amber-600",
+                "shadow-[0_8px_24px_rgba(245,158,11,0.5)]",
+              ].join(" ")}>
                 <div className="text-2xl font-bold">500+</div>
                 <div className="text-xs font-medium">Community Members</div>
               </div>
@@ -313,14 +337,24 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {whatWeTeach.map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:-translate-y-1 group"
+                className={[
+                  "bg-white rounded-2xl p-6 border border-gray-100 group",
+                  "shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.05)]",
+                  "hover:shadow-[0_6px_24px_rgba(0,0,0,0.1),0_2px_8px_rgba(22,101,52,0.08)]",
+                  "hover:-translate-y-1.5 transition-all duration-300",
+                ].join(" ")}
               >
-                <div className="w-12 h-12 bg-green-50 group-hover:bg-green-100 rounded-xl flex items-center justify-center mb-4 transition-colors">
-                  <item.icon size={22} className="text-green-700" />
+                <div className={[
+                  "w-12 h-12 rounded-xl flex items-center justify-center mb-4",
+                  "bg-green-50 group-hover:bg-green-100",
+                  "shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_2px_6px_rgba(22,101,52,0.12)]",
+                  "transition-all duration-300",
+                ].join(" ")}>
+                  <item.icon size={22} className="text-green-700 icon-glow-green" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-base">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
@@ -331,7 +365,13 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/work-with-me"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full transition-colors"
+              className={[
+                "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
+                "bg-gradient-to-br from-green-600 to-green-800",
+                "shadow-[0_4px_14px_rgba(22,101,52,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                "hover:from-green-500 hover:to-green-700 hover:shadow-[0_8px_22px_rgba(22,101,52,0.45)] hover:-translate-y-0.5",
+                "active:translate-y-0 transition-all duration-200",
+              ].join(" ")}
             >
               Explore Our Programs <ChevronRight size={16} />
             </Link>
@@ -423,7 +463,7 @@ export default function Home() {
                   { label: "Credential", value: "DNP, FNP-C" },
                   { label: "Conferences", value: "ADA Scientific Sessions" },
                 ].map((item) => (
-                  <div key={item.label} className="bg-green-50 rounded-xl p-4">
+                  <div key={item.label} className="bg-green-50 border border-green-100 rounded-xl p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_6px_rgba(22,101,52,0.08)]">
                     <div className="text-xs text-gray-500 mb-1">{item.label}</div>
                     <div className="font-semibold text-green-900 text-sm">{item.value}</div>
                   </div>
@@ -432,7 +472,13 @@ export default function Home() {
 
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full transition-colors"
+                className={[
+                  "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
+                  "bg-gradient-to-br from-green-600 to-green-800",
+                  "shadow-[0_4px_14px_rgba(22,101,52,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                  "hover:from-green-500 hover:to-green-700 hover:shadow-[0_8px_22px_rgba(22,101,52,0.45)] hover:-translate-y-0.5",
+                  "active:translate-y-0 transition-all duration-200",
+                ].join(" ")}
               >
                 Read Full Story <ChevronRight size={16} />
               </Link>
@@ -457,13 +503,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
             {freeResources.map((resource) => (
               <div
                 key={resource.title}
-                className="bg-green-800/60 backdrop-blur-sm border border-green-700 rounded-2xl p-6 hover:bg-green-800 transition-all duration-300 group"
+                className={[
+                  "rounded-2xl p-6 group transition-all duration-300",
+                  "bg-green-800/50 backdrop-blur-sm border border-green-700/60",
+                  "shadow-[0_2px_12px_rgba(0,0,0,0.2)]",
+                  "hover:bg-green-800/80 hover:border-green-600 hover:-translate-y-1",
+                  "hover:shadow-[0_8px_28px_rgba(0,0,0,0.3)]",
+                ].join(" ")}
               >
-                <div className={`w-14 h-14 ${resource.iconBg} rounded-2xl flex items-center justify-center mb-4`}>
+                <div className={[
+                  `w-14 h-14 ${resource.iconBg} rounded-2xl flex items-center justify-center mb-4`,
+                  "shadow-[0_2px_8px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.1)]",
+                ].join(" ")}>
                   <resource.Icon className={`w-8 h-8 ${resource.iconColor}`} />
                 </div>
                 <h3 className="font-bold text-white mb-2 text-base leading-snug">
@@ -474,9 +529,13 @@ export default function Home() {
                 </p>
                 <Link
                   href="/resources"
-                  className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold text-sm transition-colors"
+                  className={[
+                    "inline-flex items-center gap-1.5 text-sm font-semibold",
+                    "text-amber-400 hover:text-amber-200",
+                    "transition-all duration-200 hover:gap-2.5",
+                  ].join(" ")}
                 >
-                  <Download size={14} />
+                  <Download size={13} />
                   Download Free
                 </Link>
               </div>
@@ -484,7 +543,12 @@ export default function Home() {
           </div>
 
           {/* Email signup */}
-          <div className="bg-green-800/40 border border-green-700 rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto">
+          <div className={[
+            "rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto",
+            "bg-green-800/40 border border-green-600/40",
+            "shadow-[0_0_60px_rgba(22,101,52,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]",
+            "backdrop-blur-sm",
+          ].join(" ")}>
             <h3 className="text-2xl font-bold text-white mb-3">
               Join the Vieve Wellness Community
             </h3>
@@ -546,9 +610,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-amber-100">
+              <div key={i} className={[
+                "bg-white rounded-2xl p-8 border border-amber-100",
+                "shadow-[0_2px_8px_rgba(0,0,0,0.06),0_6px_20px_rgba(245,158,11,0.06)]",
+                "hover:shadow-[0_8px_30px_rgba(245,158,11,0.15)] hover:-translate-y-1",
+                "transition-all duration-300",
+              ].join(" ")}>
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} size={16} fill="#f59e0b" className="text-amber-400" />
@@ -568,8 +637,15 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA ─────────────────────────────────── */}
-      <section className="py-20 bg-gradient-to-br from-green-800 to-green-950 text-white text-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-20 text-white text-center relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #166534 0%, #14532d 50%, #052e16 100%)" }}
+      >
+        {/* Radial glow */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251,191,36,0.08) 0%, transparent 70%)" }}
+        />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold mb-5">
             Ready to Take Control of Your Health?
           </h2>
@@ -581,13 +657,25 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/work-with-me"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full text-base transition-all duration-200 shadow-lg hover:shadow-xl"
+              className={[
+                "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold",
+                "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
+                "shadow-[0_6px_24px_rgba(245,158,11,0.5),inset_0_1px_0_rgba(255,255,255,0.25)]",
+                "hover:from-amber-300 hover:to-amber-500 hover:shadow-[0_10px_32px_rgba(245,158,11,0.6)] hover:-translate-y-1",
+                "active:translate-y-0 transition-all duration-200",
+              ].join(" ")}
             >
               Book a Session with Dr. Genevieve
             </Link>
             <Link
               href="/resources"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full text-base border border-white/30 transition-all duration-200"
+              className={[
+                "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold",
+                "bg-white/10 border border-white/30 text-white",
+                "shadow-[0_4px_14px_rgba(0,0,0,0.2)]",
+                "hover:bg-white/20 hover:border-white/50 hover:shadow-[0_8px_22px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
+                "active:translate-y-0 transition-all duration-200",
+              ].join(" ")}
             >
               <Download size={18} />
               Get Free Resources
