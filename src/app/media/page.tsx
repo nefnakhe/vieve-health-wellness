@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import FadeImage from "@/components/FadeImage";
 import Link from "next/link";
-import { Mic, BookOpen, Users, ExternalLink, Mail, ChevronRight } from "lucide-react";
+import { Mic, BookOpen, Users, ExternalLink, Mail, ChevronRight, FlaskConical, GraduationCap, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Media & Speaking",
@@ -57,25 +57,25 @@ const conferencesAndEvents = [
     name: "ADA Scientific Sessions",
     type: "National Conference",
     description: "American Diabetes Association annual scientific conference — one of the world's premier diabetes research events.",
-    icon: "🏥",
+    icon: FlaskConical,
   },
   {
     name: "Community Wellness Health Fairs",
     type: "Community Events",
     description: "Regular participation in African and diaspora community health fairs and wellness events across the country.",
-    icon: "🌍",
+    icon: Users,
   },
   {
     name: "Diabetes Education Conferences",
     type: "Professional Development",
     description: "Active participation in diabetes education and prevention conferences, staying current with the latest research and practice.",
-    icon: "📚",
+    icon: GraduationCap,
   },
   {
     name: "Faith Community Health Events",
     type: "Community Outreach",
     description: "Health education events hosted through African churches, mosques, and faith communities.",
-    icon: "⛪",
+    icon: Heart,
   },
 ];
 
@@ -240,7 +240,9 @@ export default function MediaPage() {
                 key={event.name}
                 className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex items-start gap-5"
               >
-                <div className="text-4xl shrink-0">{event.icon}</div>
+                <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center shrink-0">
+                  <event.icon size={22} className="text-teal-700" />
+                </div>
                 <div>
                   <div className="text-xs text-amber-600 font-semibold uppercase tracking-wider mb-1">
                     {event.type}

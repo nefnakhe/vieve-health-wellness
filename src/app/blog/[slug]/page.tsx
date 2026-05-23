@@ -39,6 +39,7 @@ function renderMarkdown(content: string): string {
       // Headings
       if (line.startsWith("## ")) return `<h2>${line.slice(3)}</h2>`;
       if (line.startsWith("### ")) return `<h3>${line.slice(4)}</h3>`;
+      if (line.startsWith("#### ")) return `<h4>${line.slice(5)}</h4>`;
       // Bold
       line = line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
       // Italic
@@ -212,7 +213,7 @@ export default async function BlogPostPage({ params }: Props) {
                   href="/work-with-me"
                   className="block text-center px-4 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full text-sm transition-colors"
                 >
-                  Book a Session
+                  Consultation
                 </Link>
               </div>
 

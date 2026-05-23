@@ -165,7 +165,7 @@ export default function Home() {
                     "active:translate-y-0 transition-all duration-200",
                   ].join(" ")}
                 >
-                  Book a Session
+                  Consultation
                 </Link>
                 <Link
                   href="/resources"
@@ -646,7 +646,7 @@ export default function Home() {
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
-              Book a Session with Dr. Genevieve
+              Book a Consultation with Dr. Genevieve
             </Link>
             <Link
               href="/resources"

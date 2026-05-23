@@ -419,7 +419,7 @@ export default function ResourcesPage() {
               href="/work-with-me"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/30 hover:bg-white/10 text-white font-semibold rounded-full transition-colors"
             >
-              Book a Session
+              Consultation
             </Link>
           </div>
         </div>

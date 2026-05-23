@@ -80,7 +80,7 @@ export default function Navbar() {
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
-              Book a Session
+              Consultation
             </Link>
           </nav>
 
@@ -89,14 +89,14 @@ export default function Navbar() {
             <Link
               href="/work-with-me"
               className={[
-                "px-4 py-2 rounded-full text-xs font-bold",
+                "px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap",
                 "bg-gradient-to-br from-teal-600 to-teal-800 text-white",
                 "shadow-[0_3px_10px_rgba(15,118,110,0.35)]",
                 "hover:shadow-[0_5px_16px_rgba(15,118,110,0.45)]",
                 "transition-all duration-200",
               ].join(" ")}
             >
-              Book
+              Consultation
             </Link>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -150,7 +150,7 @@ export default function Navbar() {
               "shadow-[0_4px_14px_rgba(15,118,110,0.35)]",
             ].join(" ")}
           >
-            Book a Session with Dr. Genevieve
+            Book a Consultation with Dr. Genevieve
           </Link>
         </nav>
       </div>

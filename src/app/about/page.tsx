@@ -173,7 +173,7 @@ export default function AboutPage() {
                   href="/work-with-me"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full transition-colors"
                 >
-                  Book a Session <ChevronRight size={16} />
+                  Consultation <ChevronRight size={16} />
                 </Link>
                 <Link
                   href="/media"

@@ -32,7 +32,7 @@ const services = [
       "Action plan for lifestyle changes",
       "Ongoing questions & follow-up",
     ],
-    cta: "Book a Session",
+    cta: "Consultation",
     featured: true,
   },
   {
