@@ -171,10 +171,10 @@ export default function Footer() {
                   <Mail size={14} className="text-amber-400" />
                 </div>
                 <a
-                  href="mailto:info@vievehealthwellness.com"
+                  href="mailto:hello@vievehealthwellness.com"
                   className="text-teal-400 hover:text-amber-400 text-sm transition-colors break-all"
                 >
-                  info@vievehealthwellness.com
+                  hello@vievehealthwellness.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

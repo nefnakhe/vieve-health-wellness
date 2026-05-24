@@ -406,8 +406,8 @@ export default function WorkWithMePage() {
             </button>
             <p className="text-center text-teal-400 text-xs">
               Or email us directly:{" "}
-              <a href="mailto:info@vievehealthwellness.com" className="text-amber-400 hover:text-amber-300 underline">
-                info@vievehealthwellness.com
+              <a href="mailto:hello@vievehealthwellness.com" className="text-amber-400 hover:text-amber-300 underline">
+                hello@vievehealthwellness.com
               </a>
             </p>
           </form>
