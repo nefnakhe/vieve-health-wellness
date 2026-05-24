@@ -121,7 +121,7 @@ export default function Home() {
       {/* ── HERO SECTION ──────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #042f2e 0%, #115e59 60%, #0f766e 100%)" }}
+        style={{ background: "linear-gradient(135deg, #1a5e5c 0%, #2b7d7a 60%, #3d9c98 100%)" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[92vh]">
@@ -215,7 +215,7 @@ export default function Home() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(to right, #042f2e 0%, rgba(4,47,46,0.5) 30%, transparent 65%)",
+                      "linear-gradient(to right, #1a5e5c 0%, rgba(26,94,92,0.5) 30%, transparent 65%)",
                   }}
                 />
               </div>
@@ -233,7 +233,7 @@ export default function Home() {
             priority
             className="object-cover object-top"
           />
-          <div className="absolute inset-0" style={{ background: "rgba(4,47,46,0.78)" }} />
+          <div className="absolute inset-0" style={{ background: "rgba(26,94,92,0.78)" }} />
         </div>
 
         {/* Bottom wave */}
@@ -247,7 +247,7 @@ export default function Home() {
       {/* ── WHY VIEVE EXISTS ──────────────────────────── */}
       <section
         className="relative overflow-hidden py-24 sm:py-32"
-        style={{ background: "linear-gradient(160deg, #042f2e 0%, #0f766e 55%, #115e59 100%)" }}
+        style={{ background: "linear-gradient(160deg, #2b7d7a 0%, #3d9c98 55%, #2b7d7a 100%)" }}
       >
         {/* Subtle dot pattern overlay */}
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none"
@@ -408,7 +408,7 @@ export default function Home() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-400 to-teal-300 shadow-2xl" style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)" }}>
                     <FadeImage
                       src="/images/team/dr-genevieve-headshot.jpg"
                       alt="Dr. Genevieve Ufongene, DNP, FNP-C"
@@ -416,7 +416,7 @@ export default function Home() {
                       className="object-cover object-top opacity-0 transition-opacity duration-700"
                     />
                   </div>
-                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-500 to-amber-700 shadow-lg">
+                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-400 to-amber-600 shadow-xl" style={{ boxShadow: "0 16px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.15)" }}>
                     <FadeImage
                       src="/images/team/dr-genevieve-community.jpg"
                       alt="Dr. Genevieve at a community health event"
@@ -426,7 +426,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-400 shadow-lg">
+                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-300 shadow-xl" style={{ boxShadow: "0 16px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.15)" }}>
                     <FadeImage
                       src="/images/team/dr-genevieve-workshop.jpg"
                       alt="Dr. Genevieve presenting at an education workshop"
@@ -434,7 +434,7 @@ export default function Home() {
                       className="object-cover opacity-0 transition-opacity duration-700"
                     />
                   </div>
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-400 to-teal-400 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-300 to-teal-200 shadow-2xl" style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)" }}>
                     <FadeImage
                       src="/images/team/dr-genevieve-ada-conference.jpg"
                       alt="Dr. Genevieve at the ADA Scientific Sessions"
@@ -446,9 +446,9 @@ export default function Home() {
               </div>
 
               {/* Credential badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-teal-400 text-white px-6 py-3 rounded-full shadow-xl whitespace-nowrap">
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-teal-400 text-white px-6 py-3 rounded-full shadow-2xl whitespace-nowrap" style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.3)" }}>
                 <span className="font-bold text-sm">DNP, FNP-C</span>
-                <span className="text-teal-300 text-sm ml-2">Board Certified</span>
+                <span className="text-teal-900 font-semibold text-sm ml-2">Board Certified</span>
               </div>
             </div>
 
@@ -545,7 +545,7 @@ export default function Home() {
                 <h3 className="font-bold text-white mb-2 text-base leading-snug">
                   {resource.title}
                 </h3>
-                <p className="text-teal-300 text-sm leading-relaxed mb-5">
+                <p className="text-white text-sm leading-relaxed mb-5 opacity-90">
                   {resource.description}
                 </p>
                 <Link
@@ -573,7 +573,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-white mb-3">
               Join the Vieve Wellness Community
             </h3>
-            <p className="text-teal-300 mb-7">
+            <p className="text-white mb-7 opacity-90">
               Get culturally relevant diabetes education, wellness tips, recipes, and free
               resources delivered to your inbox.
             </p>
