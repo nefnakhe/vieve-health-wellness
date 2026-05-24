@@ -49,7 +49,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-teal-900 to-teal-800 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-500 to-teal-400 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
             {/* Photos */}
             <div className="lg:col-span-2 space-y-4">
-              <div className="relative h-[480px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-xl">
+              <div className="relative h-[480px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-xl">
                 <FadeImage
                   src="/images/team/dr-genevieve-headshot.jpg"
                   alt="Dr. Genevieve Ufongene, DNP, FNP-C"
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 flex items-end p-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 w-full">
-                    <p className="font-bold text-teal-900 text-base">
+                    <p className="font-bold text-teal-500 text-base">
                       Dr. Genevieve Ufongene
                     </p>
                     <p className="text-gray-600 text-sm">DNP, FNP-C</p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                     </span>
                   </div>
                 </div>
-                <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800 shadow-lg">
+                <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-400 shadow-lg">
                   <FadeImage
                     src="/images/team/dr-genevieve-community.jpg"
                     alt="Dr. Genevieve at community health event"
@@ -163,7 +163,7 @@ export default function AboutPage() {
                 {credentials.map((c) => (
                   <div key={c.label} className="bg-teal-50 border border-teal-100 rounded-xl p-4">
                     <div className="text-xs text-gray-500 mb-1">{c.label}</div>
-                    <div className="font-semibold text-teal-900 text-sm leading-snug">{c.value}</div>
+                    <div className="font-semibold text-teal-500 text-sm leading-snug">{c.value}</div>
                   </div>
                 ))}
               </div>
@@ -171,13 +171,13 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/work-with-me"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-white font-semibold rounded-full transition-colors"
                 >
                   Consultation <ChevronRight size={16} />
                 </Link>
                 <Link
                   href="/media"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-teal-200 hover:border-teal-700 text-teal-700 font-semibold rounded-full transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-teal-200 hover:border-teal-500 text-teal-500 font-semibold rounded-full transition-colors"
                 >
                   <Mic size={16} />
                   Speaking & Media
@@ -208,7 +208,7 @@ export default function AboutPage() {
             {values.map((v) => (
               <div key={v.title} className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                  <v.icon size={22} className="text-teal-700" />
+                  <v.icon size={22} className="text-teal-500" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-3">{v.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{v.description}</p>
@@ -231,7 +231,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-lg">
+            <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-lg">
               <FadeImage
                 src="/images/team/dr-genevieve-workshop.jpg"
                 alt="Dr. Genevieve at a diabetes education workshop"
@@ -257,7 +257,7 @@ export default function AboutPage() {
                 </span>
               </div>
             </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-800 to-teal-950 shadow-lg">
+            <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-400 to-teal-950 shadow-lg">
               <FadeImage
                 src="/images/team/dr-genevieve-ada-conference.jpg"
                 alt="ADA Scientific Sessions"
@@ -275,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-teal-900 text-white text-center">
+      <section className="py-20 bg-teal-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <Award size={40} className="text-amber-400 mx-auto mb-5" />
           <h2 className="text-3xl font-bold mb-4">Ready to Work With Dr. Genevieve?</h2>

@@ -52,13 +52,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-teal-950 text-white">
+    <footer className="bg-teal-600 text-white">
 
       {/* ── Newsletter strip ─────────────────────────────────────── */}
       <div
         className="relative overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #0f766e 0%, #115e59 60%, #0f766e 100%)",
+          background: "linear-gradient(135deg, #4b9e9c 0%, #5db5b1 60%, #4b9e9c 100%)",
           boxShadow: "inset 0 -2px 12px rgba(0,0,0,0.2)",
         }}
       >
@@ -110,7 +110,7 @@ export default function Footer() {
                   aria-label={label}
                   className={[
                     "p-2.5 rounded-full transition-all duration-200",
-                    "bg-teal-800/60 border border-teal-700/50 text-teal-300",
+                    "bg-teal-400/60 border border-teal-400/50 text-teal-200",
                     "hover:bg-amber-500 hover:border-amber-400 hover:text-white",
                     "hover:shadow-[0_4px_14px_rgba(245,158,11,0.4)]",
                     "hover:-translate-y-0.5",
@@ -187,10 +187,10 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6 p-4 rounded-xl bg-teal-900/70 border border-teal-800/50
+            <div className="mt-6 p-4 rounded-xl bg-teal-500/70 border border-teal-300/40
               shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
               <p className="text-teal-400 text-xs leading-relaxed">
-                <strong className="text-teal-300">Disclaimer:</strong> Content on this
+                <strong className="text-teal-200">Disclaimer:</strong> Content on this
                 website is for educational purposes only and does not constitute medical advice.
                 Always consult your healthcare provider for personalized guidance.
               </p>
@@ -199,7 +199,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-teal-900/70
+        <div className="mt-12 pt-8 border-t border-teal-300/70
           flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-teal-700 text-xs text-center sm:text-left">
             © {new Date().getFullYear()} Vieve Health and Wellness. All rights reserved.

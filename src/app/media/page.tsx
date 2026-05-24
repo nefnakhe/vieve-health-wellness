@@ -106,7 +106,7 @@ export default function MediaPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-teal-900 to-teal-800 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-500 to-teal-400 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -137,7 +137,7 @@ export default function MediaPage() {
                 </a>
               </div>
             </div>
-            <div className="relative h-80 lg:h-[460px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-2xl">
+            <div className="relative h-80 lg:h-[460px] rounded-3xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-2xl">
               <FadeImage
                 src="/images/team/dr-genevieve-workshop.jpg"
                 alt="Dr. Genevieve speaking at an education event"
@@ -145,7 +145,7 @@ export default function MediaPage() {
                 className="object-cover opacity-0 transition-opacity duration-700"
               />
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4">
-                <p className="font-bold text-teal-900">Dr. Genevieve Ufongene, DNP, FNP-C</p>
+                <p className="font-bold text-teal-500">Dr. Genevieve Ufongene, DNP, FNP-C</p>
                 <p className="text-gray-500 text-sm">Diabetes Educator & Community Health Advocate</p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function MediaPage() {
             </p>
             <a
               href="#booking"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-full transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-white font-semibold rounded-full transition-colors"
             >
               Request a Custom Topic <ChevronRight size={16} />
             </a>
@@ -211,7 +211,7 @@ export default function MediaPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {mediaTypes.map((type) => (
               <div key={type.title} className="text-center p-6 bg-teal-50 rounded-2xl border border-teal-100">
-                <div className="w-14 h-14 bg-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <type.icon size={24} className="text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{type.title}</h3>
@@ -241,7 +241,7 @@ export default function MediaPage() {
                 className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex items-start gap-5"
               >
                 <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center shrink-0">
-                  <event.icon size={22} className="text-teal-700" />
+                  <event.icon size={22} className="text-teal-500" />
                 </div>
                 <div>
                   <div className="text-xs text-amber-600 font-semibold uppercase tracking-wider mb-1">
@@ -277,7 +277,7 @@ export default function MediaPage() {
             ].map((photo, i) => (
               <div
                 key={i}
-                className="relative h-56 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-md"
+                className="relative h-56 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-md"
               >
                 <FadeImage
                   src={photo.src}
@@ -295,7 +295,7 @@ export default function MediaPage() {
       </section>
 
       {/* Booking Section */}
-      <section id="booking" className="py-20 bg-teal-900 text-white">
+      <section id="booking" className="py-20 bg-teal-500 text-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <Mic size={36} className="text-amber-400 mx-auto mb-4" />

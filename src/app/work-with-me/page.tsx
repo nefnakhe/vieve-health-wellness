@@ -173,7 +173,7 @@ export default function WorkWithMePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-teal-900 to-teal-800 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-600 to-teal-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
             Services
@@ -181,7 +181,7 @@ export default function WorkWithMePage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-4">
             Work With Dr. Genevieve
           </h1>
-          <p className="text-teal-300 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-teal-200 text-lg max-w-2xl mx-auto mb-8">
             Whether you need 1:1 education, group workshops, community events, or a speaking
             engagement — Dr. Genevieve brings culturally relevant diabetes expertise to every
             setting.
@@ -226,7 +226,7 @@ export default function WorkWithMePage() {
                         Most Popular
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-4">{service.title}</h3>
-                      <p className="text-teal-300 leading-relaxed text-lg">{service.description}</p>
+                      <p className="text-teal-200 leading-relaxed text-lg">{service.description}</p>
                     </div>
                     <div>
                       <h4 className="text-white font-semibold mb-5 text-lg">What&apos;s Included:</h4>
@@ -260,7 +260,7 @@ export default function WorkWithMePage() {
                   className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col"
                 >
                   <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5">
-                    <service.icon size={22} className="text-teal-700" />
+                    <service.icon size={22} className="text-teal-500" />
                   </div>
                   <h3 className="font-bold text-gray-900 text-xl mb-3">{service.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
@@ -269,7 +269,7 @@ export default function WorkWithMePage() {
                   <ul className="space-y-2 mb-5">
                     {service.includes.slice(0, 3).map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                        <CheckCircle size={14} className="text-teal-600 shrink-0 mt-0.5" />
+                        <CheckCircle size={14} className="text-teal-400 shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -281,7 +281,7 @@ export default function WorkWithMePage() {
                   </ul>
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-teal-200 hover:border-teal-700 hover:bg-teal-700 hover:text-white text-teal-700 font-semibold rounded-full text-sm transition-all duration-200"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-teal-200 hover:border-teal-400 hover:bg-teal-500 hover:text-white text-teal-500 font-semibold rounded-full text-sm transition-all duration-200"
                   >
                     {service.cta}
                   </a>
@@ -309,7 +309,7 @@ export default function WorkWithMePage() {
                 {i < process.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-teal-100 -translate-x-1/2 z-0" />
                 )}
-                <div className="relative z-10 w-16 h-16 bg-teal-700 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-5 shadow-md">
+                <div className="relative z-10 w-16 h-16 bg-teal-500 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-5 shadow-md">
                   {step.step}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-lg">{step.title}</h3>
@@ -321,14 +321,14 @@ export default function WorkWithMePage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact" className="py-20 bg-teal-900 text-white">
+      <section id="contact" className="py-20 bg-teal-500 text-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <Mail size={36} className="text-amber-400 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-white mb-3">
               Ready to Get Started?
             </h2>
-            <p className="text-teal-300">
+            <p className="text-teal-200">
               Fill out the form below or email us directly. We&apos;ll get back to you within 1–2 business days.
             </p>
           </div>

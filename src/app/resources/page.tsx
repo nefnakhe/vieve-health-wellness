@@ -125,7 +125,7 @@ const downloads = [
   {
     Icon: PortionHandIcon,
     iconBg: "bg-teal-50",
-    iconColor: "text-teal-700",
+    iconColor: "text-teal-500",
     title: "Portion Control Hand Guide",
     description:
       "A visual, practical guide to measuring food portions using your own hand — no scales, no apps, no complicated calculations needed.",
@@ -144,7 +144,7 @@ const downloads = [
     topics: ["Vegetables", "Beans & legumes", "Lean proteins", "Low-GI options"],
     file: "/downloads/diabetes-friendly-nigerian-foods.pdf",
     badge: "New",
-    badgeColor: "bg-teal-600",
+    badgeColor: "bg-teal-400",
   },
   {
     Icon: GroceryBagIcon,
@@ -161,7 +161,7 @@ const downloads = [
   {
     Icon: SmoothieIcon,
     iconBg: "bg-teal-50",
-    iconColor: "text-teal-600",
+    iconColor: "text-teal-400",
     title: "Smoothie Guide for Weight Management",
     description:
       "Healthy, satisfying smoothie recipes using ingredients familiar to African kitchens — designed to support weight management and stable blood sugar.",
@@ -197,7 +197,7 @@ const downloads = [
   {
     Icon: BalancedPlateIcon,
     iconBg: "bg-teal-50",
-    iconColor: "text-teal-700",
+    iconColor: "text-teal-500",
     title: "The Balanced African Plate Guide",
     description:
       "Visual guide to building a balanced plate using culturally familiar African foods — protein, fiber, and carbohydrates in the right proportions.",
@@ -211,8 +211,8 @@ const downloads = [
 const educationalGraphics = [
   {
     Icon: PlateMethodIcon,
-    iconBg: "bg-teal-100",
-    iconColor: "text-teal-700",
+    iconBg: "bg-teal-50",
+    iconColor: "text-teal-500",
     title: "Balanced Plate Method",
     description: "Visual of the African plate divided into sections for vegetables, protein, and starch.",
   },
@@ -233,7 +233,7 @@ const educationalGraphics = [
   {
     Icon: TrafficLightIcon,
     iconBg: "bg-red-50",
-    iconColor: "text-teal-600",
+    iconColor: "text-teal-400",
     title: "African Foods Glycemic Index Chart",
     description: "Traffic light–style chart of common African foods and their GI ratings.",
   },
@@ -247,7 +247,7 @@ const educationalGraphics = [
   {
     Icon: MealIdeasIcon,
     iconBg: "bg-teal-50",
-    iconColor: "text-teal-600",
+    iconColor: "text-teal-400",
     title: "Blood Sugar Friendly Meal Ideas",
     description: "Example meal ideas using culturally familiar African foods.",
   },

@@ -363,7 +363,7 @@ export default function Home() {
                       size={16}
                       className="text-teal-600 group-hover:text-amber-500 transition-colors duration-300 shrink-0"
                     />
-                    <h3 className="font-bold text-gray-900 text-base group-hover:text-teal-800 transition-colors duration-300">
+                    <h3 className="font-bold text-gray-900 text-base group-hover:text-teal-400 transition-colors duration-300">
                       {item.title}
                     </h3>
                   </div>
@@ -381,9 +381,9 @@ export default function Home() {
               href="/work-with-me"
               className={[
                 "inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white",
-                "bg-gradient-to-br from-teal-600 to-teal-800",
+                "bg-gradient-to-br from-teal-600 to-teal-400",
                 "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                "hover:from-teal-500 hover:to-teal-700 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
+                "hover:from-teal-500 hover:to-teal-500 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                 "active:translate-y-0 transition-all duration-200",
               ].join(" ")}
             >
@@ -391,7 +391,7 @@ export default function Home() {
             </Link>
             <Link
               href="/blog"
-              className="text-teal-700 hover:text-teal-900 font-semibold text-sm underline underline-offset-4 decoration-teal-200 hover:decoration-teal-500 transition-all duration-200"
+              className="text-teal-500 hover:text-teal-500 font-semibold text-sm underline underline-offset-4 decoration-teal-200 hover:decoration-teal-500 transition-all duration-200"
             >
               Or browse our free articles →
             </Link>
@@ -408,7 +408,7 @@ export default function Home() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-700 to-teal-900 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-500 to-teal-500 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-headshot.jpg"
                       alt="Dr. Genevieve Ufongene, DNP, FNP-C"
@@ -426,7 +426,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800 shadow-lg">
+                  <div className="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-teal-400 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-workshop.jpg"
                       alt="Dr. Genevieve presenting at an education workshop"
@@ -434,7 +434,7 @@ export default function Home() {
                       className="object-cover opacity-0 transition-opacity duration-700"
                     />
                   </div>
-                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-800 to-teal-950 shadow-lg">
+                  <div className="relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-400 to-teal-400 shadow-lg">
                     <FadeImage
                       src="/images/team/dr-genevieve-ada-conference.jpg"
                       alt="Dr. Genevieve at the ADA Scientific Sessions"
@@ -446,7 +446,7 @@ export default function Home() {
               </div>
 
               {/* Credential badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-teal-800 text-white px-6 py-3 rounded-full shadow-xl whitespace-nowrap">
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-teal-400 text-white px-6 py-3 rounded-full shadow-xl whitespace-nowrap">
                 <span className="font-bold text-sm">DNP, FNP-C</span>
                 <span className="text-teal-300 text-sm ml-2">Board Certified</span>
               </div>
@@ -486,7 +486,7 @@ export default function Home() {
                 ].map((item) => (
                   <div key={item.label} className="bg-teal-50 border border-teal-100 rounded-xl p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_6px_rgba(15,118,110,0.08)]">
                     <div className="text-xs text-gray-500 mb-1">{item.label}</div>
-                    <div className="font-semibold text-teal-900 text-sm">{item.value}</div>
+                    <div className="font-semibold text-teal-500 text-sm">{item.value}</div>
                   </div>
                 ))}
               </div>
@@ -495,9 +495,9 @@ export default function Home() {
                 href="/about"
                 className={[
                   "inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white",
-                  "bg-gradient-to-br from-teal-600 to-teal-800",
+                  "bg-gradient-to-br from-teal-600 to-teal-400",
                   "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                  "hover:from-teal-500 hover:to-teal-700 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
+                  "hover:from-teal-500 hover:to-teal-500 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
                   "active:translate-y-0 transition-all duration-200",
                 ].join(" ")}
               >
@@ -509,7 +509,7 @@ export default function Home() {
       </section>
 
       {/* ── FREE RESOURCES ────────────────────────────── */}
-      <section className="py-20 bg-teal-900 text-white">
+      <section className="py-20 bg-teal-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-amber-400 font-semibold text-sm uppercase tracking-wider">
@@ -530,9 +530,9 @@ export default function Home() {
                 key={resource.title}
                 className={[
                   "rounded-2xl p-6 group transition-all duration-300",
-                  "bg-teal-800/50 backdrop-blur-sm border border-teal-700/60",
+                  "bg-teal-400/50 backdrop-blur-sm border border-teal-500/60",
                   "shadow-[0_2px_12px_rgba(0,0,0,0.2)]",
-                  "hover:bg-teal-800/80 hover:border-teal-600 hover:-translate-y-1",
+                  "hover:bg-teal-400/80 hover:border-teal-600 hover:-translate-y-1",
                   "hover:shadow-[0_8px_28px_rgba(0,0,0,0.3)]",
                 ].join(" ")}
               >
@@ -566,7 +566,7 @@ export default function Home() {
           {/* Email signup */}
           <div className={[
             "rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto",
-            "bg-teal-800/40 border border-teal-600/40",
+            "bg-teal-400/40 border border-teal-600/40",
             "shadow-[0_0_60px_rgba(15,118,110,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]",
             "backdrop-blur-sm",
           ].join(" ")}>
@@ -596,7 +596,7 @@ export default function Home() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-900 transition-colors"
+              className="inline-flex items-center gap-2 text-teal-500 font-semibold hover:text-teal-500 transition-colors"
             >
               View all articles <ChevronRight size={16} />
             </Link>
