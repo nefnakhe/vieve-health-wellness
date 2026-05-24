@@ -518,7 +518,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
               Free Educational Resources
             </h2>
-            <p className="text-teal-300 text-lg">
+            <p className="text-white text-lg opacity-90">
               Practical guides created specifically for African and diaspora
               communities — completely free.
             </p>
@@ -538,8 +538,9 @@ export default function Home() {
               >
                 <div className={[
                   `w-14 h-14 ${resource.iconBg} rounded-2xl flex items-center justify-center mb-4`,
-                  "shadow-[0_2px_8px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.1)]",
-                ].join(" ")}>
+                  "shadow-[0_4px_16px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                  "bg-gradient-to-br",
+                ].join(" ")}                  style={{ backgroundImage: `linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%)` }}>
                   <resource.Icon className={`w-8 h-8 ${resource.iconColor}`} />
                 </div>
                 <h3 className="font-bold text-white mb-2 text-base leading-snug">

@@ -78,7 +78,7 @@ export default function Footer() {
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 leading-tight">
             Join the Vieve Wellness Community
           </h3>
-          <p className="text-teal-200 mb-7 text-sm sm:text-base leading-relaxed">
+          <p className="text-white mb-7 text-sm sm:text-base leading-relaxed opacity-90">
             Get culturally relevant diabetes education, wellness tips, recipes, and free
             resources delivered to your inbox.
           </p>
@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="mb-4">
               <Logo variant="light" size="sm" />
             </div>
-            <p className="text-teal-500 text-sm leading-relaxed mb-6">
+            <p className="text-white text-sm leading-relaxed mb-6 opacity-90">
               Helping African and diaspora communities better understand diabetes,
               nutrition, and wellness through culturally relevant education.
             </p>
@@ -181,16 +181,16 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={14} className="text-amber-400" />
                 </div>
-                <span className="text-teal-500 text-sm leading-relaxed">
+                <span className="text-white text-sm leading-relaxed opacity-90">
                   Serving the African & diaspora community worldwide via telehealth
                 </span>
               </li>
             </ul>
 
             <div className="mt-6 p-4 rounded-xl bg-teal-500/70 border border-teal-300/40
-              shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-              <p className="text-teal-400 text-xs leading-relaxed">
-                <strong className="text-teal-200">Disclaimer:</strong> Content on this
+              shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_8px_20px_rgba(0,0,0,0.15)]" style={{ backgroundImage: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)" }}>
+              <p className="text-white text-xs leading-relaxed opacity-90">
+                <strong className="text-white">Disclaimer:</strong> Content on this
                 website is for educational purposes only and does not constitute medical advice.
                 Always consult your healthcare provider for personalized guidance.
               </p>
