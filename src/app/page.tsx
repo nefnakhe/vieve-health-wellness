@@ -375,26 +375,45 @@ export default function Home() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-            <Link
-              href="/work-with-me"
-              className={[
-                "inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white",
-                "bg-gradient-to-br from-teal-600 to-teal-400",
-                "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
-                "hover:from-teal-500 hover:to-teal-500 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
-                "active:translate-y-0 transition-all duration-200",
-              ].join(" ")}
+          {/* CTA + Dr. Genevieve clinical photo */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 pt-2">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                href="/work-with-me"
+                className={[
+                  "inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white",
+                  "bg-gradient-to-br from-teal-600 to-teal-400",
+                  "shadow-[0_4px_14px_rgba(15,118,110,0.35),inset_0_1px_0_rgba(255,255,255,0.15)]",
+                  "hover:from-teal-500 hover:to-teal-500 hover:shadow-[0_8px_22px_rgba(15,118,110,0.45)] hover:-translate-y-0.5",
+                  "active:translate-y-0 transition-all duration-200",
+                ].join(" ")}
+              >
+                Explore All Programs <ChevronRight size={15} />
+              </Link>
+              <Link
+                href="/blog"
+                className="text-teal-500 hover:text-teal-500 font-semibold text-sm underline underline-offset-4 decoration-teal-200 hover:decoration-teal-500 transition-all duration-200"
+              >
+                Or browse our free articles →
+              </Link>
+            </div>
+
+            {/* Dr. Genevieve clinical photo — bottom right */}
+            <div className="relative w-64 h-48 lg:w-72 lg:h-56 rounded-2xl overflow-hidden shadow-2xl shrink-0 self-end"
+              style={{ boxShadow: "0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)" }}
             >
-              Explore All Programs <ChevronRight size={15} />
-            </Link>
-            <Link
-              href="/blog"
-              className="text-teal-500 hover:text-teal-500 font-semibold text-sm underline underline-offset-4 decoration-teal-200 hover:decoration-teal-500 transition-all duration-200"
-            >
-              Or browse our free articles →
-            </Link>
+              <FadeImage
+                src="/images/team/dr-genevieve-clinical.jpg"
+                alt="Dr. Genevieve Ufongene in a clinical setting"
+                fill
+                className="object-cover object-center"
+              />
+              {/* Subtle label badge */}
+              <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow">
+                <span className="text-teal-700 font-semibold text-xs">Dr. Genevieve, DNP, FNP-C</span>
+              </div>
+            </div>
           </div>
 
         </div>
